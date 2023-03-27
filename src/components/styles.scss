@@ -1,0 +1,14 @@
+.nav {
+    display: flex;
+    background-color: lightblue;
+
+    &__link {
+        height: 50px;
+        width: 100px;
+        background-color: lightgreen;
+
+        &--active {
+            background-color: aqua;
+        }
+    }
+}
