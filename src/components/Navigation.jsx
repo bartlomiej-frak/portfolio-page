@@ -9,7 +9,7 @@ function Navigation() {
                 </div>
                 <ul className="nav__links">
                     <li className="nav_link">
-                        <a href="/">WORK</a>
+                        <Link to="/">WORK</Link>
                     </li>
                     <li className="nav__link">
                         <Link to="/Info">INFO</Link>

@@ -105,10 +105,22 @@ html {
 
         li {
             font-size: 2rem;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                color: #cec5ff;
+            }
         }
 
         li:first-child {
+            display: flex;
             color: #a47cf2;
+
+            span {
+                color: #a47cf2;
+                transform: translate(-50%, 12.5%);
+            }
         }
     }
 

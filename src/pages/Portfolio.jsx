@@ -27,7 +27,9 @@ function Portfolio() {
                     <div className="works__header">
                         <h1>Works</h1>
                         <ul className="works__filter">
-                            <li>*All</li>
+                            <li>
+                                <span>*</span>All
+                            </li>
                             <li>Collaborations</li>
                             <li>Concepts</li>
                             <li>Graphic Design</li>
