@@ -1,0 +1,120 @@
+$primary-color: #080808;
+$secondary-color: #dbdbdb;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $secondary-color;
+    font-family: 'Aeonik-Regular', sans-serif;
+}
+
+* a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: $primary-color;
+}
+
+//Components
+@import './Button-style.scss';
+@import './Card-styles.scss';
+@import './Footer-style.scss';
+@import './Navigation-styles.scss';
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 720px;
+    padding: 60px 125px;
+
+    &__title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 198px;
+        width: 190px;
+    }
+
+    h2 {
+        width: 200px;
+        color: #959595;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 55px;
+        text-align: justify;
+        text-indent: 390px;
+        font-weight: 400;
+
+        span {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 56px;
+        }
+    }
+
+    p {
+        align-self: flex-end;
+        width: 286px;
+        font-size: 1.4rem;
+        text-align: left;
+        line-height: 20px;
+    }
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 125px;
+
+    &__header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-size: 10rem;
+            font-weight: 400;
+        }
+    }
+
+    &__filter {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+
+        li {
+            font-size: 2rem;
+        }
+
+        li:first-child {
+            color: #a47cf2;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

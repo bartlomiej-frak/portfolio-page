@@ -1,0 +1,87 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 65px auto;
+
+    padding: 70px 125px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        div {
+            display: flex;
+            gap: 5px;
+        }
+    }
+
+    &__info {
+        align-self: center;
+        font-size: 1.8rem;
+        line-height: 25px;
+    }
+
+    &__contact {
+        display: grid;
+        align-self: flex-end;
+        grid-template-columns: 35px auto;
+        grid-template-rows: repeat(3, 35px);
+
+        p {
+            align-self: center;
+            font-size: 18px;
+        }
+
+        img {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    &__picture {
+        grid-column: 2/3;
+        grid-row: 1/4;
+
+        justify-self: right;
+    }
+}
+
+.experience {
+    &__title {
+        border-bottom: 1px solid #c6c6c6;
+
+        p {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 520px auto;
+        gap: 65px 110px;
+
+        div {
+            align-self: flex-start;
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin: 15px 0;
+        }
+    }
+}
+
+.skills {
+    &__title {
+        border-bottom: 1px solid #c6c6c6;
+    }
+}

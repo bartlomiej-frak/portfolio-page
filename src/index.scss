@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
-$primary-color: '#000000';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'Aeonik-Thin';
+    src: local('Aeonik-Thin'), url('./components/fonts/Aeonik-Thin.otf') format('opentype');
 }
 
-html {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: $primary-color;
+@font-face {
+    font-family: 'Aeonik-Regular';
+    src: local('Aeonik-Regular'), url('./components/fonts/Aeonik-Regular.otf') format('opentype');
 }
+
+@import './styles/Main.scss';
+@import './styles/Info.scss';

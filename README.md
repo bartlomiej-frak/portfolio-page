@@ -1,3 +1,9 @@
-# portfolio-page
+# Portfolio-page (Justyna Odej)
 
-![](./src/screen1.PNG)
+Justyna Odej a UI/UX and graphic designer based in Poland, in love with creating friendly designs and user experiences.
+
+Socials:
+
+[Linktree](https://linktr.ee/justynaodej)
+
+![](./screen1.PNG)

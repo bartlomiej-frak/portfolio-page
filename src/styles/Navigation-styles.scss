@@ -1,0 +1,30 @@
+.nav__wrapper {
+    width: 100%;
+    border-bottom: 0.5px solid #c6c6c6;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 125px;
+
+    &__title {
+        a {
+            font-size: 1.7rem;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        gap: 67px;
+        list-style: none;
+
+        a {
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+    }
+}
