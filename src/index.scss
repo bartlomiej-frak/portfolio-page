@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Aeonik-Light';
+    src: local('Aeonik-Light'), url('./components/fonts/Aeonik-Light.otf') format('opentype');
+}
+
+@font-face {
     font-family: 'Aeonik-Regular';
     src: local('Aeonik-Regular'), url('./components/fonts/Aeonik-Regular.otf') format('opentype');
 }

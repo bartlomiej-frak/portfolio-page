@@ -7,40 +7,81 @@ $links_transition: 0.3s;
 
 .footer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    max-width: 1440px;
     margin: 0 auto;
-    height: 135px;
-    padding: 30px 125px;
+    height: 320px;
+    padding: 60px 14px 30px;
 
     &__title {
-        a:hover {
-            transition: $links_transition;
-            color: #cec5ff;
-        }
-    }
-
-    ul {
-        display: flex;
-        list-style: none;
+        font-size: 1.8rem;
+        font-weight: 400;
     }
 
     &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
         font-size: 1.7rem;
-        gap: 67px;
-
-        a:hover {
-            transition: $links_transition;
-            color: #a47cf2;
-        }
+        gap: 17px;
     }
 
     &__socials {
-        width: 20px;
-        height: 20px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
         gap: 30px;
+
+        .link__hover {
+            display: none;
+        }
+    }
+
+    .copyright {
+        align-self: flex-end;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        font-family: 'Aeonik-Thin';
+        font-weight: 250;
+        color: #808080;
+
+        span {
+            color: inherit;
+        }
+    }
+}
+
+@media (min-width: 1140px) {
+    .footer {
+        flex-direction: row;
+
+        max-width: 1440px;
+        height: 135px;
+        padding: 30px 125px;
+
+        &__title {
+            flex-basis: 125px;
+
+            a:hover {
+                transition: $links_transition;
+                color: #cec5ff;
+            }
+        }
+
+        &__links {
+            flex-direction: row;
+            gap: 95px;
+
+            a:hover {
+                transition: $links_transition;
+                color: #a47cf2;
+            }
+        }
 
         a {
             position: relative;
@@ -60,19 +101,14 @@ $links_transition: 0.3s;
                 }
             }
         }
-    }
-}
 
-.copyright {
-    align-self: flex-end;
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Aeonik-Thin';
-    font-weight: 250;
-    color: #808080;
+        &__socials {
+            flex-basis: 125px;
+            gap: 50px;
 
-    span {
-        color: inherit;
+            .link__hover {
+                display: block;
+            }
+        }
     }
 }

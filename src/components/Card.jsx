@@ -7,7 +7,7 @@ function Card({ title, tags }) {
 
     return (
         <div className="card">
-            <h1>{title}</h1>
+            <h1 className="card__title">{title}</h1>
             <div className="card__tags">{renderTags}</div>
         </div>
     );

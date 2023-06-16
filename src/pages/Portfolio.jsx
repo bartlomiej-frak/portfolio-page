@@ -9,19 +9,26 @@ function Portfolio() {
             <div className="container">
                 <header className="hero">
                     <div className="hero__title">
-                        <img className="hero__logo" src="assets/logo.png" alt="logo" />
+                        <img className="hero__logo--desktop" src="assets/logo.png" alt="logo" />
+                        <img
+                            className="hero__logo--mobile"
+                            src="assets/logo_mobile.png"
+                            alt="logo"
+                        />
                         <h2>Creative UI/UX & Graphic Designer</h2>
                     </div>
-                    <h1>
-                        Hello, I am Justyna Odej a <span>UI/UX</span> and{' '}
-                        <span>graphic designer</span> based in Poland, in love with creating
-                        friendly designs and user experiences.
-                    </h1>
-                    <p>
-                        With over 4 years of experience, I approach my work with love and
-                        enthusiasm, always striving to produce visually stunning designs that make a
-                        meaningful impact.
-                    </p>
+                    <div className="hero__description">
+                        <h1>
+                            Hello, I am Justyna Odej a <span>UI/UX</span> and{' '}
+                            <span>graphic designer</span> based in Poland, in love with creating
+                            friendly designs and user experiences.
+                        </h1>
+                        <p>
+                            With over 4 years of experience, I approach my work with love and
+                            enthusiasm, always striving to produce visually stunning designs that
+                            make a meaningful impact.
+                        </p>
+                    </div>
                 </header>
                 <section className="works">
                     <div className="works__header">
