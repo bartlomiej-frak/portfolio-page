@@ -1,7 +1,16 @@
-// import './Button-style.scss';
+import className from 'classnames';
 
-function Button({ tag }) {
-    return <button>{tag}</button>;
+function Button({ tag, primary, secondary, ...rest }) {
+    const classes = className(rest.className, {
+        primary: primary,
+        secondary: secondary,
+    });
+
+    return (
+        <button {...rest} className={classes}>
+            {tag}
+        </button>
+    );
 }
 
 export default Button;

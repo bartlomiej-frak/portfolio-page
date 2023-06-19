@@ -1,9 +1,13 @@
-.about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 65px auto;
+.info {
+    margin: 80px auto 0;
+    padding: 30px 14px;
+    color: #ffffff;
+    font-family: 'Aeonik-Light';
+}
 
-    padding: 70px 125px;
+.about {
+    display: flex;
+    flex-direction: column;
 
     &__header {
         display: flex;
@@ -12,76 +16,168 @@
 
         h1 {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 60px;
             font-style: italic;
+            font-size: 6rem;
             font-weight: 400;
+            color: #ffffff;
         }
 
         div {
             display: flex;
-            gap: 5px;
+            gap: 3px;
         }
     }
 
-    &__info {
-        align-self: center;
+    &__author {
+        margin: 30px 0;
+        background: linear-gradient(1.01deg, #000000 -5.06%, rgba(255, 255, 255, 0) 214.7%);
+    }
+
+    &__description {
         font-size: 1.8rem;
         line-height: 25px;
     }
 
     &__contact {
-        display: grid;
-        align-self: flex-end;
-        grid-template-columns: 35px auto;
-        grid-template-rows: repeat(3, 35px);
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        gap: 10px;
 
-        p {
-            align-self: center;
-            font-size: 18px;
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-
-        img {
-            align-self: center;
-            justify-self: center;
-        }
-    }
-
-    &__picture {
-        grid-column: 2/3;
-        grid-row: 1/4;
-
-        justify-self: right;
     }
 }
 
-.experience {
-    &__title {
-        border-bottom: 1px solid #c6c6c6;
+//ACCORDION COMPONENT
+.accordion {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 25px;
+        border-bottom: 1px solid $secondary-color;
+        font-family: 'Aeonik-Regular';
 
         p {
             font-size: 3rem;
-            margin-bottom: 20px;
-        }
-    }
-
-    &__list {
-        display: grid;
-        grid-template-columns: 520px auto;
-        gap: 65px 110px;
-
-        div {
-            align-self: flex-start;
-        }
-
-        p {
-            font-size: 1.8rem;
-            margin: 15px 0;
         }
     }
 }
 
-.skills {
-    &__title {
-        border-bottom: 1px solid #c6c6c6;
+.resume {
+    margin: 30px 0 70px;
+
+    &--desktop {
+        display: none;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 30px 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-family: 'Aeonik-Regular';
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 30px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 1.4rem;
+        }
+    }
+
+    .exp {
+        p {
+            margin-top: 30px;
+        }
+    }
+
+    .edu {
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p:first-of-type {
+            color: $secondary-color;
+        }
+    }
+
+    .certifications {
+        p {
+            font-size: 1.8rem;
+            color: #808080;
+        }
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 90px;
+                height: 90px;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+
+        p:last-child {
+            font-size: 1.8rem;
+            line-height: 25px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .tolls {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1140px) {
+    .info {
+        .resume {
+            &--mobile {
+                display: none;
+            }
+
+            &--desktop {
+                display: block;
+            }
+
+            h1 {
+                border-bottom: 1px solid white;
+            }
+        }
     }
 }

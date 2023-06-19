@@ -5,8 +5,6 @@ $secondary-color: #dbdbdb;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: $secondary-color;
-    font-family: 'Aeonik-Regular', sans-serif;
 }
 
 * a {
@@ -16,6 +14,8 @@ $secondary-color: #dbdbdb;
 
 html {
     font-size: 62.5%;
+    font-family: 'Aeonik-Regular', sans-serif;
+    color: $secondary-color;
     background-color: $primary-color;
 }
 
@@ -25,8 +25,9 @@ html {
 @import './Footer-style.scss';
 @import './Navigation-styles.scss';
 
-.container {
+.portfolio {
     margin: 80px auto 0;
+    padding: 30px 14px;
 }
 
 .hero {
@@ -41,13 +42,9 @@ html {
         align-items: center;
     }
 
-    &__logo--desktop {
-        display: none;
-    }
-
-    &__logo--mobile {
-        height: 148px;
-        width: 140px;
+    &__logo {
+        width: 116px;
+        height: 123px;
     }
 
     h2 {
@@ -64,7 +61,6 @@ html {
         flex-grow: 1;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 14px;
 
         h1 {
             font-size: 3.2rem;
@@ -91,7 +87,7 @@ html {
 .works {
     display: flex;
     flex-direction: column;
-    padding: 60px 14px 120px;
+    padding: 60px auto 120px;
 
     &__filter {
         display: none;
@@ -112,29 +108,25 @@ html {
 }
 
 @media (min-width: 1140px) {
-    .container {
+    .portfolio {
         max-width: 1440px;
         margin: 80px auto;
+        padding: 0;
     }
 
     .hero {
         height: 720px;
         padding: 60px 125px;
 
-        &__logo--mobile {
-            display: none;
-        }
-
-        &__logo--desktop {
-            display: block;
-            height: 198px;
-            width: 190px;
-        }
-
         h2 {
             width: 200px;
             font-size: 2.5rem;
             margin-right: 90px;
+        }
+
+        &__logo {
+            width: 190px;
+            height: 198px;
         }
 
         &__description {

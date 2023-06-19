@@ -2,7 +2,7 @@ import Button from './Button';
 
 function Card({ title, tags }) {
     const renderTags = tags.map((tag) => {
-        return <Button key={tag} tag={tag} />;
+        return <Button key={tag} tag={tag} primary />;
     });
 
     return (

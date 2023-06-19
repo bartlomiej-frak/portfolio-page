@@ -35,10 +35,6 @@ $links_transition: 0.3s;
         justify-content: center;
         list-style: none;
         gap: 30px;
-
-        .link__hover {
-            display: none;
-        }
     }
 
     .copyright {
@@ -106,8 +102,9 @@ $links_transition: 0.3s;
             flex-basis: 125px;
             gap: 50px;
 
-            .link__hover {
-                display: block;
+            .link:hover path {
+                transition: $links_transition;
+                fill: #a47cf2;
             }
         }
     }

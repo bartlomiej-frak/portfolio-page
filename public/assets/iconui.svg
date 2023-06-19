@@ -1,0 +1,5 @@
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="45" cy="45" r="44.5" transform="matrix(-1 0 0 1 90 0)" stroke="#626262"/>
+<path d="M27 64.2852C27 54.344 35.0589 46.2852 45 46.2852C54.9411 46.2852 63 54.344 63 64.2852" stroke="white" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M45.0001 46.2853C50.6807 46.2853 55.2858 41.6802 55.2858 35.9996C55.2858 30.3189 50.6807 25.7139 45.0001 25.7139C39.3194 25.7139 34.7144 30.3189 34.7144 35.9996C34.7144 41.6802 39.3194 46.2853 45.0001 46.2853Z" stroke="white" stroke-miterlimit="10" stroke-linecap="square"/>
+</svg>

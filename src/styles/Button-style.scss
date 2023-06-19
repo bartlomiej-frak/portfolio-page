@@ -2,8 +2,20 @@ button {
     height: 30px;
     padding: 6px 12px;
     font-size: 1.1rem;
+    color: $secondary-color;
     border-radius: 60px;
-    background: rgba(255, 255, 255, 0.1);
     border: 0.5px solid #ffffff;
+}
+
+.primary {
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(9px);
+}
+
+.secondary {
+    height: 40px;
+    background: none;
+}
+
+@media (min-width: 1140px) {
 }

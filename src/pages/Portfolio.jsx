@@ -6,15 +6,10 @@ function Portfolio() {
     return (
         <>
             <Navigation />
-            <div className="container">
+            <div className="portfolio">
                 <header className="hero">
                     <div className="hero__title">
-                        <img className="hero__logo--desktop" src="assets/logo.png" alt="logo" />
-                        <img
-                            className="hero__logo--mobile"
-                            src="assets/logo_mobile.png"
-                            alt="logo"
-                        />
+                        <img className="hero__logo" src="assets/logo.png" alt="page_logo" />
                         <h2>Creative UI/UX & Graphic Designer</h2>
                     </div>
                     <div className="hero__description">

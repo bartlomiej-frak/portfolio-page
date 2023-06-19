@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Aeonik-Thin';
-    src: local('Aeonik-Thin'), url('./components/fonts/Aeonik-Thin.otf') format('opentype');
+    src: local('Aeonik-Thin'), url('./components/fonts/Aeonik-Thin.otf') format('truetype');
 }
 
 @font-face {
@@ -13,5 +13,10 @@
     src: local('Aeonik-Regular'), url('./components/fonts/Aeonik-Regular.otf') format('opentype');
 }
 
-@import './styles/Main.scss';
+@font-face {
+    font-family: 'Aeonik-Medium';
+    src: local('Aeonik-Medium'), url('./components/fonts/Aeonik-Medium.otf') format('opentype');
+}
+
+@import './styles/Portfolio.scss';
 @import './styles/Info.scss';
