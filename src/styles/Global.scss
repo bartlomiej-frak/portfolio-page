@@ -1,0 +1,28 @@
+$primary-color: #080808;
+$secondary-color: #dbdbdb;
+$tertiary-color: #ffffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Aeonik-Regular', sans-serif;
+    color: $secondary-color;
+    background-color: $primary-color;
+}
+
+//Components
+@import './components-styles/Button-styles.scss';
+@import './components-styles/Card-styles.scss';
+@import './components-styles/Footer-styles.scss';
+@import './components-styles/MobileMenu-styles.scss';
+@import './components-styles/Navigation-styles.scss';

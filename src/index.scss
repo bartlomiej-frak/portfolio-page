@@ -18,6 +18,7 @@
     src: local('Aeonik-Medium'), url('./components/fonts/Aeonik-Medium.otf') format('opentype');
 }
 
+@import './styles/Global.scss';
 @import './styles/Portfolio.scss';
 @import './styles/Info.scss';
 @import './styles/Work.scss';

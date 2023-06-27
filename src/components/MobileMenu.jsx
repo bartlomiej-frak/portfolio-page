@@ -1,4 +1,3 @@
-import '../styles/MobileMenu-styles.scss';
 import Link from './Link';
 
 function MobileMenu({ setIsOpen }) {

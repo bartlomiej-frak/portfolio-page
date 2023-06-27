@@ -1,4 +1,3 @@
-import '../styles/Navigation-styles.scss';
 import Link from './Link';
 import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';

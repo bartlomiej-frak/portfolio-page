@@ -4,12 +4,11 @@ button {
     font-size: 1.1rem;
     color: #dbdbdb;
     border-radius: 60px;
-    border: 0.5px solid #ffffff;
+    border: 0.5px solid $tertiary-color;
 }
 
 .primary {
     background: rgba(255, 255, 255, 0.1);
-    // backdrop-filter: blur(9px);
 }
 
 .secondary {

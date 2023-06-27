@@ -1,7 +1,7 @@
 .info {
     margin: 80px auto 0;
     padding: 30px 14px;
-    color: #ffffff;
+    color: $tertiary-color;
     font-family: 'Aeonik-Light';
 }
 
@@ -20,7 +20,7 @@
             font-style: italic;
             font-size: 6rem;
             font-weight: 400;
-            color: #ffffff;
+            color: $tertiary-color;
         }
 
         div {
