@@ -15,7 +15,7 @@ function TollsRender() {
     ];
 
     const renderTags = tags.map((tag) => {
-        return <Button tag={tag} secondary />;
+        return <Button key={tag} tag={tag} secondary />;
     });
 
     return <div className="resume__section tolls">{renderTags}</div>;

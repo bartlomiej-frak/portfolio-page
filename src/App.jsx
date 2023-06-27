@@ -7,6 +7,7 @@ import './components/fonts/Aeonik-Medium.otf';
 import Route from './components/Route';
 import Portfolio from './pages/Portfolio';
 import Info from './pages/Info';
+import BooLink from './pages/BooLink';
 
 function App() {
     return (
@@ -16,6 +17,9 @@ function App() {
             </Route>
             <Route path="/Info">
                 <Info />
+            </Route>
+            <Route path="/Boolink">
+                <BooLink />
             </Route>
         </>
     );

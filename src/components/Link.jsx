@@ -1,7 +1,7 @@
 import useNavigation from '../hooks/use-navigation';
 
 function Link({ to, children }) {
-    const { navigate, currentPath } = useNavigation();
+    const { navigate } = useNavigation();
 
     const handleClick = (e) => {
         if (e.metaKey || e.ctrlKey) {

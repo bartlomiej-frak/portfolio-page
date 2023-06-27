@@ -1,0 +1,46 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #080808;
+    padding: 30px 14px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+
+        a {
+            font-size: 7.5rem;
+        }
+
+        a:last-child {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+        list-style: none;
+    }
+}

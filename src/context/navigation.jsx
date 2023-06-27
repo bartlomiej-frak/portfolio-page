@@ -18,6 +18,7 @@ function NavigationProvider({ children }) {
 
     const navigate = (to) => {
         window.history.pushState({}, '', to);
+        window.scrollTo(0, 0);
         setCurrentPath(to);
     };
 

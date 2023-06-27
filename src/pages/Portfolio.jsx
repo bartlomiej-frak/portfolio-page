@@ -1,11 +1,20 @@
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import CardList from '../components/CardList';
+import FilterList from '../components/FilterList';
+import { useEffect, useRef, useState } from 'react';
 
 function Portfolio() {
+    const workSection = useRef();
+    const [sectionOffset, setSectionOffset] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener('load', setSectionOffset(workSection.current?.offsetTop));
+    }, []);
+
     return (
         <>
-            <Navigation />
+            <Navigation section={sectionOffset} />
             <div className="portfolio">
                 <header className="hero">
                     <div className="hero__title">
@@ -25,18 +34,8 @@ function Portfolio() {
                         </p>
                     </div>
                 </header>
-                <section className="works">
-                    <div className="works__header">
-                        <h1>Works</h1>
-                        <ul className="works__filter">
-                            <li>
-                                <span>*</span>All
-                            </li>
-                            <li>Collaborations</li>
-                            <li>Concepts</li>
-                            <li>Graphic Design</li>
-                        </ul>
-                    </div>
+                <section ref={workSection} className="works">
+                    <FilterList />
                     <CardList />
                 </section>
             </div>

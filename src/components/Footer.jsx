@@ -1,3 +1,4 @@
+import '../styles/Footer-styles.scss';
 import Link from './Link';
 
 function Footer() {

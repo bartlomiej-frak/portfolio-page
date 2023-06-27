@@ -19,12 +19,6 @@ html {
     background-color: $primary-color;
 }
 
-//Components
-@import './Button-style.scss';
-@import './Card-styles.scss';
-@import './Footer-style.scss';
-@import './Navigation-styles.scss';
-
 .portfolio {
     margin: 80px auto 0;
     padding: 30px 14px;
@@ -90,20 +84,46 @@ html {
     padding: 60px auto 120px;
 
     &__filter {
-        display: none;
+        display: flex;
+        align-items: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        gap: 5px;
+        list-style: none;
+
+        li {
+            line-height: 30px;
+        }
+
+        input {
+            border: none;
+            background-color: inherit;
+            color: white;
+            font-size: 1.4rem;
+            font-family: 'Aeonik-Light';
+            transition: 0.3s linear;
+        }
     }
 
     &__header {
         display: flex;
+        flex-direction: column;
         width: 100%;
         justify-content: space-between;
-        align-items: center;
+        align-items: left;
         margin-bottom: 60px;
 
         h1 {
             font-size: 7.5rem;
             font-weight: 400;
         }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -155,34 +175,33 @@ html {
     .works {
         padding: 40px 125px;
 
+        &__header {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         &__filter {
             display: flex;
-            gap: 40px;
-            list-style: none;
-
+            align-items: center;
+            gap: 20px;
             li {
-                font-size: 2rem;
-                transition: 0.3s;
-                cursor: pointer;
-
-                &:hover {
-                    color: #cec5ff;
-                }
+                line-height: 30px;
             }
 
-            li:first-child {
-                display: flex;
-                color: #a47cf2;
+            input {
+                height: 30px;
+                font-size: 2rem;
 
-                span {
+                &:hover {
                     color: #a47cf2;
-                    transform: translate(-50%, 12.5%);
+                    cursor: pointer;
                 }
             }
         }
 
         &__list {
-            display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
             gap: 10px;
         }

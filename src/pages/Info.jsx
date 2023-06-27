@@ -51,7 +51,6 @@ function Info() {
                             <Button tag="UI/UX" primary />
                         </div>
                     </div>
-                    <img className="about__author" src="assets/picture.png" alt="author" />
                     <p className="about__description">
                         UI/UX designer, graphic designer and artist. Graduated with a Master's
                         degree in Fine Arts, specializing in Publication Design from the Faculty of
@@ -77,15 +76,32 @@ function Info() {
                             <p>linktr.ee/justynaodej</p>
                         </div>
                     </div>
+                    <img className="about__author" src="assets/picture.png" alt="author" />
                 </section>
                 <div className="resume resume--mobile">
                     <Accordion items={items} />
                 </div>
                 <div className="resume resume--desktop">
-                    <section>
+                    <div className="resume__experience">
                         <h1>Experience</h1>
                         <ExpRender />
-                    </section>
+                    </div>
+                    <div>
+                        <h1>Skills</h1>
+                        <SkillsRender />
+                    </div>
+                    <div>
+                        <h1>Education</h1>
+                        <EducationRender />
+                    </div>
+                    <div>
+                        <h1>Certifications</h1>
+                        <CertificationsRender />
+                    </div>
+                    <div>
+                        <h1>Tools</h1>
+                        <TollsRender />
+                    </div>
                 </div>
             </div>
             <Footer />
