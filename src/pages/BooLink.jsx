@@ -10,7 +10,7 @@ function BooLink() {
     let isVisible = useIsVisible(myRef);
 
     const [isMobile, setIsMobile] = useState(false);
-    const [translation, setTranslation] = useState();
+    const [translation, setTranslation] = useState(0);
 
     //Animation on Scroll
     const handleScroll = () => {
@@ -77,31 +77,33 @@ function BooLink() {
                             would enhance the visual impact of the templates offered on the website.
                         </p>
                     </div>
-                    <div ref={myRef} className={`work__photos`}>
-                        <img
+                    <div className={`work__photos`}>
+                        <div
+                            ref={myRef}
+                            style={{ transform: `translateY(${isVisible && translation}px)` }}
+                        >
+                            <img
+                                style={{
+                                    animationPlayState: `${translation > 0 && 'paused'}`,
+                                }}
+                                src="assets/boolink/boo-link01.png"
+                                alt="smartphone_left"
+                            />
+                        </div>
+                        <div
                             style={{
-                                animationPlayState: `${translation > 0 && 'paused'}`,
-                                transform: `translateY(${isVisible && translation}px)`,
-                            }}
-                            src="assets/boolink/boo_link1.png"
-                            alt="boo_lin_notebook"
-                        />
-                        <img
-                            style={{
-                                animationPlayState: `${translation > 0 && 'paused'}`,
                                 transform: `translateY(-${isVisible && translation}px)`,
                             }}
-                            src="assets/boolink/phone_01.png"
-                            alt="smartphone_left"
-                        />
-                        <img
-                            style={{
-                                animationPlayState: `${translation > 0 && 'paused'}`,
-                                transform: `translateY(-${isVisible && translation}px)`,
-                            }}
-                            src="assets/boolink/phone_02.png"
-                            alt="smartphone_right"
-                        />
+                        >
+                            <img
+                                style={{
+                                    animationPlayState: `${translation > 0 && 'paused'}`,
+                                    transform: `translateY(-${isVisible && translation}px)`,
+                                }}
+                                src="assets/boolink/boo-link02.png"
+                                alt="smartphone_right"
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="work__design">

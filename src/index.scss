@@ -1,21 +1,7 @@
 @font-face {
-    font-family: 'Aeonik-Thin';
-    src: local('Aeonik-Thin'), url('./components/fonts/Aeonik-Thin.otf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Aeonik-Light';
-    src: local('Aeonik-Light'), url('./components/fonts/Aeonik-Light.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Aeonik-Regular';
-    src: local('Aeonik-Regular'), url('./components/fonts/Aeonik-Regular.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Aeonik-Medium';
-    src: local('Aeonik-Medium'), url('./components/fonts/Aeonik-Medium.otf') format('opentype');
+    font-family: 'Neuve-Regular';
+    src: local('neuvegrotesque-regular'),
+        url('./components/fonts/neuvegrotesque-regular.ttf') format('truetype');
 }
 
 @import './styles/Global.scss';

@@ -2,7 +2,6 @@
     margin: 0 auto;
     padding: 40px 14px 60px;
     color: $secondary-color;
-    font-family: 'Aeonik-Light';
     font-size: 1.8rem;
     overflow: hidden;
 
@@ -98,23 +97,17 @@
             width: 280px;
         }
 
-        img:nth-child(1) {
-            top: 10px;
+        div:nth-child(1) img {
+            top: 0;
             left: 0;
             transition: 1s linear;
             animation: move-up 5s linear forwards;
         }
 
-        img:nth-child(2) {
-            top: 40px;
-            left: -35px;
+        div:nth-child(2) img {
+            top: 0;
+            left: 20px;
             animation: move-down 5s linear forwards;
-        }
-
-        img:nth-child(3) {
-            top: 150px;
-            left: 40px;
-            animation: move-up 5s linear forwards;
         }
     }
 
