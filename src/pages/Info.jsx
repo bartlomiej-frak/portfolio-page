@@ -43,15 +43,15 @@ function Info() {
         <>
             <Navigation />
             <div className="info">
-                <section className="about">
-                    <div className="about__header">
+                <section className="info__intro">
+                    <div className="header">
                         <h1>Info</h1>
                         <div>
                             <Button tag="Graphic Designer" primary />
                             <Button tag="UI/UX" primary />
                         </div>
                     </div>
-                    <p className="about__description">
+                    <p className="description">
                         UI/UX designer, graphic designer and artist. Graduated with a Master's
                         degree in Fine Arts, specializing in Publication Design from the Faculty of
                         Arts at Jan Kochanowski University in Kielce. Also holds a Engineer's degree
@@ -62,7 +62,7 @@ function Info() {
                         community of the SPPS "Zdrowy Tumlin" Association, where she conducts art
                         classes for children. Passionate about art, psychology and neuroaesthetics.
                     </p>
-                    <div className="about__contact">
+                    <div className="contact">
                         <div>
                             <img src="assets/email.svg" alt="email" />
                             <p>odej.studio@gmail.com</p>
@@ -76,13 +76,13 @@ function Info() {
                             <p>linktr.ee/justynaodej</p>
                         </div>
                     </div>
-                    <img className="about__author" src="assets/picture.png" alt="author" />
+                    <img className="author" src="assets/picture.png" alt="author" />
                 </section>
-                <div className="resume resume--mobile">
+                <div className="info__resume info__resume--mobile">
                     <Accordion items={items} />
                 </div>
-                <div className="resume resume--desktop">
-                    <div className="resume__experience">
+                <div className="info__resume info__resume--desktop">
+                    <div>
                         <h1>Experience</h1>
                         <ExpRender />
                     </div>

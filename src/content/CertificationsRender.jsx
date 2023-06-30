@@ -1,6 +1,6 @@
 function CertificationsRender() {
     return (
-        <div className="resume__section certifications">
+        <div className="section certifications">
             <div>
                 <h2>Graphic Design Foundations: Layout and Composition</h2>
                 <p>LinkedIn, apr 2023</p>

@@ -1,7 +1,7 @@
 function ExpRender() {
     return (
-        <div className="resume__section exp">
-            <div className="exp__row">
+        <div className="section exp">
+            <div className="row">
                 <div>
                     <h2>Conducting original artistic workshops SPPS "Zdrowy Tumlin" Association</h2>
                     <p>10.2022 - present</p>
@@ -13,14 +13,14 @@ function ExpRender() {
                     freely express themselves, explore their emotions, and discover new insights.
                 </p>
             </div>
-            <div className="exp__row">
+            <div className="row">
                 <div>
                     <h2>Freelancer</h2>
                     <p>10.2022 - present</p>
                 </div>
                 <p>Product photography, branding, web design, graphic design, analog arts.</p>
             </div>
-            <div className="exp__row">
+            <div className="row">
                 <div>
                     <h2>
                         UI/UX Designer - Internship, Erasmus + Boosmart Digital Marketing Agency,

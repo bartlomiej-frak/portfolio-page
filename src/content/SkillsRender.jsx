@@ -1,6 +1,6 @@
 function SkillsRender() {
     return (
-        <div className="resume__section skills">
+        <div className="section skills">
             <div>
                 <img src="assets/iconui.svg" alt="visual_design" />
                 <p>Visual Design</p>
@@ -25,7 +25,7 @@ function SkillsRender() {
                 <img src="assets/iconui.svg" alt="visual_design" />
                 <p>Prototyping</p>
             </div>
-            <p>
+            <p className="other">
                 <span>Other:</span> teamwork; attention to detail; quick problem-solving and
                 decision-making; good work organization; project management;
             </p>

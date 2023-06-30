@@ -79,6 +79,14 @@
     }
 }
 
+@media (min-width: 992px) {
+    .desktop {
+        &__wrapper {
+            padding: 30px 60px;
+        }
+    }
+}
+
 @media (min-width: 1200px) {
     .desktop {
         &__wrapper {

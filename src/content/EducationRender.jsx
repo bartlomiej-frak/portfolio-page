@@ -1,6 +1,6 @@
 function EducationRender() {
     return (
-        <div className="resume__section edu">
+        <div className="section edu">
             <div>
                 <h2>Vocational Education</h2>
                 <p>2023 - present</p>

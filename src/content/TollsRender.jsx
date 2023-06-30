@@ -18,7 +18,7 @@ function TollsRender() {
         return <Button key={tag} tag={tag} secondary />;
     });
 
-    return <div className="resume__section tolls">{renderTags}</div>;
+    return <div className="section tolls">{renderTags}</div>;
 }
 
 export default TollsRender;

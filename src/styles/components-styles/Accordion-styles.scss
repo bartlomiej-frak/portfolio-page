@@ -1,0 +1,16 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 25px;
+        border-bottom: 1px solid $secondary-color;
+
+        p {
+            font-size: 3rem;
+        }
+    }
+}
