@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import MobileMenu from '../components/MobileMenu';
 
-function Navigation({ section }) {
+function Navigation() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -15,13 +15,6 @@ function Navigation({ section }) {
         } else {
             setScrolled(false);
         }
-    };
-
-    const scrollToSection = () => {
-        window.scrollTo({
-            top: section - 70,
-            behavior: 'smooth',
-        });
     };
 
     const handleClick = () => {
@@ -47,10 +40,10 @@ function Navigation({ section }) {
 
     return (
         <>
-            <nav className={navbarClasses.join(' ') + ' mobile work__mobile'}>
+            <nav className={navbarClasses.join(' ') + ' mobile'}>
                 {isOpen ? (
                     <>
-                        <img src="assets/logo.png" alt="page_logo" />
+                        <img src="assets/logo-mobile.svg" alt="page_logo" />
                         <FiX onClick={handleClick} className="mobile__menu" />
                     </>
                 ) : (
@@ -70,8 +63,10 @@ function Navigation({ section }) {
                         <Link to="/">JUSTYNA ODEJ</Link>
                     </div>
                     <ul className="desktop__links">
-                        <li onClick={scrollToSection} className="desktop__link">
-                            <Link to="/">WORK</Link>
+                        <li className="desktop__link">
+                            <Link to="/" section="works">
+                                WORK
+                            </Link>
                         </li>
                         <li className="desktop__link">
                             <Link to="/Info">INFO</Link>

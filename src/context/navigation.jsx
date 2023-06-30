@@ -16,10 +16,17 @@ function NavigationProvider({ children }) {
         };
     }, []);
 
-    const navigate = (to) => {
+    const navigate = (to, section) => {
         window.history.pushState({}, '', to);
-        window.scrollTo(0, 0);
         setCurrentPath(to);
+
+        switch (section) {
+            case 'works':
+                window.scrollTo(0, 542);
+                break;
+            default:
+                window.scrollTo(0, 0);
+        }
     };
 
     return (

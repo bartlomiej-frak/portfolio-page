@@ -9,11 +9,11 @@ function FilterList() {
     };
 
     return (
-        <div className="works__header">
-            <h1>Works</h1>
-            <ul className="works__filter">
+        <div>
+            <ul>
                 <li>
-                    <input type="submit" value="*All" onClick={handleFilterTag} />
+                    <input type="submit" value="All" onClick={handleFilterTag} />
+                    <img src="assets/logo-small.svg" alt="small-logo" />
                 </li>
                 <li>
                     <input type="submit" value="UI/UX" onClick={handleFilterTag} />

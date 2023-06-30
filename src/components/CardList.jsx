@@ -8,7 +8,7 @@ function CardList() {
     const filterItems = createSelector(
         [(state) => state.data, (state) => state.searchTerm],
         (data, searchTerm) => {
-            if (searchTerm !== '' && searchTerm !== '*All')
+            if (searchTerm !== '' && searchTerm !== 'All')
                 return data.filter((item) => item.tags.includes(searchTerm));
             else return data;
         }

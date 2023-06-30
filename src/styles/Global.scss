@@ -19,6 +19,8 @@ $primary-font: 'Neuve-Regular';
 html {
     font-size: 62.5%;
     font-family: $primary-font, sans-serif;
+    font-weight: 400;
+    // letter-spacing: -2px; ???
     color: $secondary-color;
     background-color: $primary-color;
 }
@@ -29,3 +31,4 @@ html {
 @import './components-styles/Footer-styles.scss';
 @import './components-styles/MobileMenu-styles.scss';
 @import './components-styles/Navigation-styles.scss';
+@import './components-styles/Cardlist-styles.scss';

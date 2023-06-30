@@ -1,15 +1,17 @@
 import useNavigation from '../hooks/use-navigation';
 
-function Link({ to, children }) {
+function Link({ to, children, section }) {
     const { navigate } = useNavigation();
 
     const handleClick = (e) => {
         if (e.metaKey || e.ctrlKey) {
-            window.open(`/document/${to}`, '_blank');
+            if (section) {
+                window.open(`/document/${to}`, '_blank').scrollTo({ top: 542 });
+            } else window.open(`/document/${to}`, '_blank');
         }
         e.preventDefault();
 
-        navigate(to);
+        navigate(to, section);
     };
 
     return (

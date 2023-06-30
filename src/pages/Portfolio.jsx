@@ -2,42 +2,49 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import CardList from '../components/CardList';
 import FilterList from '../components/FilterList';
-import { useEffect, useRef, useState } from 'react';
 
 function Portfolio() {
-    const workSection = useRef();
-    const [sectionOffset, setSectionOffset] = useState(0);
-
-    useEffect(() => {
-        window.addEventListener('load', setSectionOffset(workSection.current?.offsetTop));
-    }, []);
-
     return (
         <>
-            <Navigation section={sectionOffset} />
+            <Navigation />
             <div className="portfolio">
-                <header className="hero">
-                    <div className="hero__title">
-                        <img className="hero__logo" src="assets/logo.png" alt="page_logo" />
-                        <h2>Creative UI/UX & Graphic Designer</h2>
+                <div className="portfolio__header">
+                    <div className="images">
+                        <img
+                            className="images--mobile"
+                            src="assets/logo-mobile.svg"
+                            alt="logo-mobile"
+                        />
+                        <img
+                            className="images--desktop"
+                            src="assets/logo-desktop.svg"
+                            alt="logo-desktop"
+                        />
                     </div>
-                    <div className="hero__description">
-                        <h1>
-                            Hello, I am Justyna Odej a <span>UI/UX</span> and{' '}
-                            <span>graphic designer</span> based in Poland, in love with creating
-                            friendly designs and user experiences.
-                        </h1>
-                        <p>
-                            With over 4 years of experience, I approach my work with love and
-                            enthusiasm, always striving to produce visually stunning designs that
-                            make a meaningful impact.
-                        </p>
+                    <h2>Creative UI/UX & Graphic Designer</h2>
+                </div>
+                <div className="portfolio__hero">
+                    <p className="intro">
+                        {' '}
+                        <span>hello</span>, I am Justyna Odej a{' '}
+                        <span>ui/ux & graphic designer</span> based in Poland, in love with creating
+                        friendly designs and user experiences.
+                    </p>
+                    <p className="description">
+                        With over 4 years of experience in design, I approach my work with love and
+                        enthusiasm, always striving to produce visually stunning designs that make a
+                        meaningful impact.
+                    </p>
+                </div>
+                <div className="portfolio__navigation">
+                    <h1>Works</h1>
+                    <div className="filters filters--desktop">
+                        <FilterList />
                     </div>
-                </header>
-                <section ref={workSection} className="works">
-                    <FilterList />
+                </div>
+                <div className="portfolio__works">
                     <CardList />
-                </section>
+                </div>
             </div>
             <Footer />
         </>

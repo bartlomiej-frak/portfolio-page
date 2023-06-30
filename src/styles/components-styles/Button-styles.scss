@@ -16,5 +16,10 @@ button {
     background: none;
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 992px) {
+    button {
+        height: 30px;
+        padding: 6px 12px;
+        font-size: 1.1rem;
+    }
 }

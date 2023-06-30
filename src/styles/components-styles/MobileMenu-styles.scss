@@ -1,5 +1,7 @@
 .menu {
     position: fixed;
+    top: 80px;
+    left: 0;
     width: 100%;
     height: calc(100% - 80px);
     background-color: #080808;
@@ -19,9 +21,11 @@
             font-size: 7.5rem;
         }
 
-        a:last-child {
-            font-family: 'Times New Roman', Times, serif;
-            font-style: italic;
+        li:last-child {
+            a {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+            }
         }
     }
 
@@ -34,6 +38,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        p {
+            font-size: 1.8rem;
         }
     }
 

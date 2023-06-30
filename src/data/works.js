@@ -7,51 +7,51 @@ const works = [
     },
     {
         id: 2,
-        title: 'Yol Uzmani',
-        tags: ['Collaborations', 'UI/UX', 'Case Study'],
-        link: 'YolUzmani',
-    },
-    {
-        id: 3,
-        title: 'Commerce Assist',
-        tags: ['Collaborations', 'Wireframes'],
-        link: 'CommerceAssist',
-    },
-    {
-        id: 4,
-        title: 'Seaside Juicery E-commerce',
-        tags: ['Collaborations', 'UI/UX'],
-        link: 'SeasideJuicery',
-    },
-    {
-        id: 5,
-        title: 'GovernCash+',
-        tags: ['Collaborations', 'UI/UX', 'Case Study'],
-        link: 'GovernCash',
-    },
-    {
-        id: 6,
         title: 'TAKK',
         tags: ['Collaborations', 'UI/UX', 'Case Study'],
         link: 'Takk',
     },
     {
+        id: 3,
+        title: 'GovernCash+',
+        tags: ['Collaborations', 'UI/UX', 'Case Study'],
+        link: 'GovernCash',
+    },
+    {
+        id: 4,
+        title: 'Seaside Juicery E-commerce',
+        tags: ['Collaborations', 'UI/UX'],
+        link: 'Seaside',
+    },
+    {
+        id: 5,
+        title: 'Commerce Assist',
+        tags: ['Collaborations', 'Wireframes'],
+        link: 'CommerceAssist',
+    },
+    {
+        id: 6,
+        title: 'Yol Uzmani',
+        tags: ['Collaborations', 'UI/UX', 'Case Study'],
+        link: 'YolUzmani',
+    },
+    {
         id: 7,
         title: 'Addicional Tasks',
         tags: ['Collaborations', 'UI'],
-        link: 'AddicionalTasks',
+        link: 'AddictionalTasks',
     },
     {
         id: 8,
         title: 'Dashboard',
         tags: ['Graphic Design', 'Wireframes'],
-        link: 'Dashboard',
+        link: '',
     },
     {
         id: 9,
         title: 'Graphic Design',
         tags: ['Graphic Design'],
-        link: 'GraphicDesign',
+        link: '',
     },
 ];
 

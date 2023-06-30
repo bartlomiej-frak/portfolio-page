@@ -1,6 +1,4 @@
-import Navigation from '../components/Navigation';
 import Button from '../components/Button';
-import { FiX } from 'react-icons/fi';
 import Link from '../components/Link';
 import { useRef, useState, useEffect } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
@@ -9,110 +7,125 @@ function BooLink() {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
-    const [isMobile, setIsMobile] = useState(false);
-    const [translation, setTranslation] = useState(0);
+    const [scrollTop, setScrollTop] = useState(0);
 
     //Animation on Scroll
-    const handleScroll = () => {
-        setTranslation(window.scrollY * 0.1);
-    };
     useEffect(() => {
+        const handleScroll = (event) => {
+            setScrollTop(window.scrollY * 0.05);
+        };
+
         window.addEventListener('scroll', handleScroll);
-    }, []);
 
-    //Navbar Mobila / Desktop
-    const handleViewChange = () => {
-        if (window.innerWidth <= 1040) setIsMobile(true);
-        else setIsMobile(false);
-    };
-
-    useEffect(() => {
-        window.addEventListener('resize', handleViewChange);
-    }, []);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrollTop]);
 
     return (
-        <>
-            {!isMobile && <Navigation />}
-            <div className="work">
-                <div
-                    onClick={() => {
-                        window.scrollTo({ top: 542 });
-                    }}
-                >
-                    <Link to="/">
-                        <FiX className="work__close" />
-                    </Link>
-                </div>
+        <div className="work">
+            <div className="work__topbar work__topbar--mobile"></div>
+            <div className="work__content">
+                <Link to="/" section="works">
+                    <div className="close">
+                        <svg
+                            width="30"
+                            height="30"
+                            viewBox="0 0 30 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g id="Close">
+                                <path
+                                    id="Vector"
+                                    d="M28 2L2 28"
+                                    stroke="white"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="square"
+                                />
+                                <path
+                                    id="Vector_2"
+                                    d="M28 28L2 2"
+                                    stroke="white"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="square"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                </Link>
                 <div className="work__header">
                     <h1>Boo.link</h1>
-                    <div>
+                    <div className="tags">
                         <Button tag="UI/UX" primary />
                         <Button tag="Collaborations" primary />
                         <Button tag="Case Study" primary />
                     </div>
-                    <div>
+                    <div className="link">
                         <img src="assets/link.svg" alt="link" />
-                        <a href="http://wwww.takk.com.tr">takk.com.tr</a>
+                        <a href="https://boo.link">boo.link</a>
                     </div>
                 </div>
-                <div className="work__description">
-                    <div className="work__goals">
-                        <div className="box">Challenge</div>
-                        <p>
-                            Re-design the boo.link website and create a set of backgrounds for their
-                            templates. Enhance the overall visual appeal of the website and provide
-                            a range of attractive backgrounds that would complement the templates.
-                        </p>
-                        <ul>
-                            <li>Product vision</li>
-                            <li>UI Design</li>
-                            <li>Designed website for desktop and mobile</li>
-                        </ul>
-                        <div className="box box--secondary">Goal</div>
-                        <p>
-                            The primary goal of the project was to revamp the boo.link website and
-                            improve its aesthetics. The aim was to create a visually appealing and
-                            user-friendly interface that would attract and engage users.
-                            Additionally, the goal was to develop a collection of backgrounds that
-                            would enhance the visual impact of the templates offered on the website.
-                        </p>
+                <div className="work__overview">
+                    <div className="description">
+                        <div>
+                            <div className="work__box work__box--primary">Challenge</div>
+                            <p>
+                                Re-design the boo.link website and create a set of backgrounds for
+                                their templates. Enhance the overall visual appeal of the website
+                                and provide a range of attractive backgrounds that would complement
+                                the templates.
+                            </p>
+                            <ul>
+                                <li>Product vision</li>
+                                <li>UI Design</li>
+                                <li>Designed website for desktop and mobile</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="work__box work__box--secondary">Goal</div>
+                            <p>
+                                The primary goal of the project was to revamp the boo.link website
+                                and improve its aesthetics. The aim was to create a visually
+                                appealing and user-friendly interface that would attract and engage
+                                users. Additionally, the goal was to develop a collection of
+                                backgrounds that would enhance the visual impact of the templates
+                                offered on the website.
+                            </p>
+                        </div>
                     </div>
-                    <div className={`work__photos`}>
+                    <div className="images">
                         <div
                             ref={myRef}
-                            style={{ transform: `translateY(${isVisible && translation}px)` }}
+                            style={{ transform: `translateY(${isVisible && scrollTop}px)` }}
                         >
                             <img
-                                style={{
-                                    animationPlayState: `${translation > 0 && 'paused'}`,
-                                }}
-                                src="assets/boolink/boo-link01.png"
+                                className="images__img images__img--first"
+                                src="assets/boolink/boo-link-left.png"
                                 alt="smartphone_left"
                             />
                         </div>
-                        <div
-                            style={{
-                                transform: `translateY(-${isVisible && translation}px)`,
-                            }}
-                        >
+                        <div style={{ transform: `translateY(-${isVisible && scrollTop}px)` }}>
                             <img
-                                style={{
-                                    animationPlayState: `${translation > 0 && 'paused'}`,
-                                    transform: `translateY(-${isVisible && translation}px)`,
-                                }}
-                                src="assets/boolink/boo-link02.png"
+                                className="images__img images__img--second"
+                                src="assets/boolink/boo-link-right.png"
                                 alt="smartphone_right"
                             />
                         </div>
                     </div>
                 </div>
                 <div className="work__design">
-                    <h1>My Desing Process</h1>
-                    <p>Understanding, the needs of the project, making a plan, creating a design</p>
-                    <div>
-                        <div className="work__slogan">
-                            <h2 className="circle">Discover</h2>
-                            <span className="underline">
+                    <div className="header">
+                        <h1>My Desing Process</h1>
+                        <p>
+                            Understanding, the needs of the project, making a plan, creating a
+                            design
+                        </p>
+                    </div>
+                    <div className="slogans">
+                        <div className="slogan">
+                            <h2 className="slogan__circle">Discover</h2>
+                            <span className="slogan__underline">
                                 <span></span>
                             </span>
                             <p>
@@ -123,10 +136,10 @@ function BooLink() {
                                 website's purpose.
                             </p>
                         </div>
-                        <div className="work__slogan">
-                            <h2 className="circle">Define</h2>
-                            <span className="underline">
-                                <span className="second"></span>
+                        <div className="slogan">
+                            <h2 className="slogan__circle">Define</h2>
+                            <span className="slogan__underline slogan__underline--second">
+                                <span></span>
                             </span>
                             <p>
                                 Based on the gathered information, the team collaborated to define
@@ -135,10 +148,10 @@ function BooLink() {
                                 changes and ensure a cohesive user experience.
                             </p>
                         </div>
-                        <div className="work__slogan">
-                            <h2 className="circle">Develop</h2>
-                            <span className="underline">
-                                <span className="third"></span>
+                        <div className="slogan">
+                            <h2 className="slogan__circle">Develop</h2>
+                            <span className="slogan__underline slogan__underline--third">
+                                <span></span>
                             </span>
                             <p>
                                 Using Figma for the website redesign and Adobe Illustrator for
@@ -152,7 +165,7 @@ function BooLink() {
                     </div>
                 </div>
                 <div className="work__result">
-                    <div className="box">Result</div>
+                    <div className="work__box work__box--primary">Result</div>
                     <p>
                         Throughout the design process, iterative feedback loops were conducted to
                         refine and improve the designs. The team ensured that the new visuals
@@ -162,10 +175,19 @@ function BooLink() {
                         visual elements and offering an attractive set of backgrounds for their
                         templates.
                     </p>
-                    <img src="assets/boolink/boolink_mobile.png" alt="boolink-mobile" />
+                    <img
+                        className="work__result--mobile"
+                        src="assets/boolink/boo-link03-mobile.png"
+                        alt="boolink-mobile"
+                    />
+                    <img
+                        className="work__result--desktop"
+                        src="assets/boolink/boo-link04-desktop.png"
+                        alt="boolink-mobile"
+                    />
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

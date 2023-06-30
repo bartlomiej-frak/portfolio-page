@@ -1,186 +1,265 @@
 .portfolio {
-    margin: 80px auto 0;
-    padding: 30px 14px;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__title {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__logo {
-        width: 116px;
-        height: 123px;
-    }
-
-    h2 {
-        width: 200px;
-        color: #959595;
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 30px;
-        transform: translateY(-25%);
-    }
-
-    &__description {
-        display: flex;
-        flex-grow: 1;
-        flex-direction: column;
-        justify-content: space-between;
-
-        h1 {
-            font-size: 3.2rem;
-            font-weight: 400;
-
-            span {
-                font-family: 'Times New Roman', Times, serif;
-                font-style: italic;
-                font-size: 3.6rem;
-            }
-        }
-
-        p {
-            margin-top: 40px;
-            width: 176px;
-            font-size: 1.2rem;
-            text-align: left;
-            line-height: 15px;
-        }
-    }
-}
-
-.works {
-    display: flex;
-    flex-direction: column;
-    padding: 60px auto 120px;
-
-    &__filter {
-        display: flex;
-        align-items: center;
-        align-content: flex-start;
-        flex-wrap: wrap;
-        gap: 5px;
-        list-style: none;
-
-        li {
-            line-height: 30px;
-        }
-
-        input {
-            border: none;
-            background-color: inherit;
-            color: $tertiary-color;
-            font-size: 1.4rem;
-            transition: 0.3s linear;
-        }
-    }
+    margin: 80px auto;
+    max-width: 1440px;
+    padding: 0 15px;
 
     &__header {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+        align-items: center;
         justify-content: space-between;
-        align-items: left;
-        margin-bottom: 60px;
+        gap: 50px;
 
+        margin: 100px 0 40px;
+
+        .images {
+            &--desktop {
+                display: none;
+            }
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+            color: #959595;
+            transform: translateY(-35%);
+        }
+    }
+
+    &__hero {
+        display: flex;
+        flex-direction: column;
+
+        .intro {
+            font-size: 3.6rem;
+            letter-spacing: -2px;
+
+            span:nth-child(1) {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+            }
+
+            span:nth-child(2) {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                color: #a59bd8;
+            }
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #a5a5a5;
+            width: 80%;
+            margin: 40px 0;
+        }
+    }
+
+    &__navigation {
         h1 {
             font-size: 7.5rem;
             font-weight: 400;
         }
+
+        .filters {
+            &--desktop {
+                display: none;
+            }
+        }
     }
 
-    &__list {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
+    &__works {
+        margin-top: 40px;
     }
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 576px) {
     .portfolio {
-        max-width: 1440px;
-        margin: 80px auto;
-        padding: 0;
-    }
+        &__header {
+            gap: 250px;
 
-    .hero {
-        height: 720px;
-        padding: 60px 125px;
-
-        h2 {
-            width: 200px;
-            font-size: 2.5rem;
-            margin-right: 90px;
+            h2 {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
         }
 
-        &__logo {
-            width: 190px;
-            height: 198px;
-        }
-
-        &__description {
-            padding: 0;
-
-            h1 {
-                font-size: 48px;
-                text-indent: 390px;
-
-                span {
-                    font-size: 56px;
-                }
+        &__hero {
+            .intro {
+                text-indent: 100px;
+                text-align: justify;
+                font-size: 3.2rem;
             }
 
-            p {
-                align-self: flex-end;
-                text-align: left;
-                margin-right: 50px;
-                width: 240px;
-                font-size: 1.4rem;
-                line-height: 20px;
+            .description {
+                width: 50%;
             }
         }
     }
+}
 
-    .works {
-        padding: 40px 125px;
+@media (min-width: 768px) {
+    .portfolio {
+        padding: 0 50px;
 
         &__header {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
+            gap: 250px;
 
-        &__filter {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            li {
-                line-height: 30px;
+            .images {
+                img {
+                    width: 150px;
+                }
+                &--mobile {
+                    display: none;
+                }
+
+                &--desktop {
+                    display: block;
+                }
             }
 
-            input {
-                height: 30px;
-                font-size: 2rem;
+            h2 {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+        }
 
-                &:hover {
-                    color: #a47cf2;
-                    cursor: pointer;
+        &__hero {
+            .intro {
+                font-size: 4rem;
+                line-height: 4.2rem;
+                letter-spacing: -2px;
+            }
+
+            .description {
+                align-self: flex-end;
+                // text-align: right;
+                width: 35%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio {
+        padding: 0 60px;
+
+        &__header {
+            gap: 450px;
+        }
+
+        &__hero {
+            .intro {
+                font-size: 5.8rem;
+                line-height: 6rem;
+                letter-spacing: -2px;
+            }
+
+            .description {
+                font-size: 1.4rem;
+                color: #a5a5a5;
+                width: 30%;
+                margin: 100px 0;
+            }
+        }
+
+        &__navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            h1 {
+                font-size: 10rem;
+                font-weight: 400;
+            }
+
+            .filters {
+                &--desktop {
+                    display: block;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    list-style: none;
+
+                    li:first-child {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+
+                        input {
+                            color: #a47cf2;
+                        }
+                    }
+
+                    input {
+                        font-size: 2rem;
+                        color: $tertiary-color;
+                        background: none;
+                        border: none;
+                        transition: 0.2s linear;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #cec5ff;
+                        }
+                    }
                 }
             }
         }
 
-        &__list {
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
+        &__works {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio {
+        padding: 0 125px;
+
+        &__header {
+            gap: 550px;
+        }
+
+        &__hero {
+            .intro {
+                font-size: 5.8rem;
+                line-height: 6rem;
+            }
+
+            .description {
+                width: 28%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .portfolio {
+        padding: 0;
+
+        &__header {
+            gap: 1000px;
+        }
+
+        &__hero {
+            .intro {
+                text-indent: 600px;
+            }
+
+            .description {
+                width: 18%;
+            }
+        }
+
+        &__navigation {
+            .filters {
+                ul {
+                    gap: 40px;
+                }
+            }
         }
     }
 }
