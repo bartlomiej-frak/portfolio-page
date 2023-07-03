@@ -19,7 +19,7 @@ function CardList() {
         return <Card key={work.id} title={work.title} tags={work.tags} link={work.link} />;
     });
 
-    return <div className="works__list">{renderCards}</div>;
+    return <div className="worklist">{renderCards}</div>;
 }
 
 export default CardList;

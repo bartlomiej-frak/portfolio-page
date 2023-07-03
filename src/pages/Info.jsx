@@ -45,7 +45,7 @@ function Info() {
             <div className="info">
                 <section className="info__intro">
                     <div className="header">
-                        <h1>Info</h1>
+                        <h1>info</h1>
                         <div>
                             <Button tag="Graphic Designer" primary />
                             <Button tag="UI/UX" primary />
@@ -73,7 +73,7 @@ function Info() {
                         </div>
                         <div>
                             <img src="assets/link.svg" alt="linktr" />
-                            <p>linktr.ee/justynaodej</p>
+                            <a href="https://linktr.ee/justynaodej">linktr.ee/justynaodej</a>
                         </div>
                     </div>
                     <img className="author" src="assets/picture.png" alt="author" />
@@ -82,7 +82,7 @@ function Info() {
                     <Accordion items={items} />
                 </div>
                 <div className="info__resume info__resume--desktop">
-                    <div>
+                    <div className="first_section">
                         <h1>Experience</h1>
                         <ExpRender />
                     </div>

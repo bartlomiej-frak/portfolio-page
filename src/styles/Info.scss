@@ -53,6 +53,11 @@
             p {
                 font-size: 1.8rem;
             }
+
+            a {
+                font-size: 1.8rem;
+                color: $tertiary-color;
+            }
         }
     }
 
@@ -110,9 +115,8 @@
         }
 
         .skills {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             flex-wrap: wrap;
 
             div {
@@ -127,10 +131,12 @@
 
                 p {
                     font-size: 1.6rem;
+                    text-align: center;
                 }
             }
 
             p:last-child {
+                grid-column: 1/3;
                 font-size: 1.8rem;
                 line-height: 25px;
 
@@ -152,6 +158,16 @@
 @media (min-width: 768px) {
     .info {
         padding: 30px 60px;
+
+        &__resume {
+            .skills {
+                grid-template-columns: repeat(3, 1fr);
+
+                p:last-child {
+                    grid-column: 1/4;
+                }
+            }
+        }
     }
 }
 
@@ -195,6 +211,10 @@
                 p {
                     font-size: 1.4rem;
                 }
+
+                a {
+                    font-size: 1.4rem;
+                }
             }
         }
 
@@ -214,7 +234,7 @@
                 border-bottom: 1px solid #c6c6c6;
             }
 
-            div:nth-child(1) {
+            .first_section {
                 grid-column: 1 / 3;
             }
 
@@ -255,12 +275,10 @@
             }
 
             .skills {
-                flex-direction: row;
-                justify-content: space-evenly;
-                height: calc(100% - 163px);
+                display: grid;
+                // height: calc(100% - 163px);
 
                 p.other {
-                    align-self: flex-end;
                     font-size: 1.8rem;
                     line-height: 2.5rem;
                     width: 100%;
@@ -291,17 +309,23 @@
 
             .description {
                 margin-top: 20px;
-                font-size: 1.8rem;
+                font-size: 1.4rem;
                 line-height: 2.5rem;
             }
 
             .contact {
                 align-self: flex-end;
-                margin: 0;
+                margin: 15px 0;
 
                 p {
                     font-size: 1.4rem;
                 }
+            }
+        }
+
+        &__resume {
+            .tolls {
+                width: 80%;
             }
         }
     }
@@ -309,16 +333,24 @@
 
 @media (min-width: 1440px) {
     .info {
-        padding: 100px 0 60px;
+        padding: 100px 125px 60px;
 
         &__intro {
             column-gap: 110px;
+
+            .description {
+                font-size: 1.8rem;
+            }
 
             .contact {
                 align-self: flex-end;
                 margin: 0;
 
                 p {
+                    font-size: 1.8rem;
+                }
+
+                a {
                     font-size: 1.8rem;
                 }
             }

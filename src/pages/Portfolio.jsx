@@ -25,10 +25,13 @@ function Portfolio() {
                 </div>
                 <div className="portfolio__hero">
                     <p className="intro">
-                        {' '}
-                        <span>hello</span>, I am Justyna Odej a{' '}
-                        <span>ui/ux & graphic designer</span> based in Poland, in love with creating
-                        friendly designs and user experiences.
+                        <span>hello</span>, I am Justyna Odej an{' '}
+                        <span>
+                            ui<span className="slash">/</span>ux <span className="and">&</span>{' '}
+                            graphic designer{' '}
+                        </span>
+                        based in Poland, in love with creating friendly designs and user's
+                        experiences.
                     </p>
                     <p className="description">
                         With over 4 years of experience in design, I approach my work with love and

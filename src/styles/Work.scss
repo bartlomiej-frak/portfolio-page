@@ -12,11 +12,18 @@
 
     &__content {
         padding: 15px;
+        margin: 0 auto;
+        max-width: 1440px;
 
         .close {
             position: absolute;
             top: 20px;
             right: 15px;
+            z-index: 3;
+
+            &--fixed {
+                position: fixed;
+            }
 
             svg {
                 width: 20px;
@@ -108,18 +115,17 @@
                 &--first {
                     position: absolute;
                     top: 0;
-                    animation: animation-up 5s linear forwards;
+                    animation: animation-up 3s linear forwards;
                 }
 
                 &--second {
                     position: relative;
                     top: -10px;
-                    animation: animation-down 5s linear forwards;
+                    animation: animation-down 3s linear forwards;
                 }
-
                 &--single {
                     position: relative;
-                    animation: animation-down 5s linear forwards;
+                    animation: animation-up 3s linear forwards;
                 }
             }
         }
@@ -147,7 +153,7 @@
             p {
                 font-size: 1.8rem;
                 line-height: 2.5rem;
-                margin-top: 30px;
+                // margin-top: 15px;
             }
 
             .slogan {
@@ -450,12 +456,12 @@
 //Image animation
 @keyframes animation-down {
     to {
-        transform: translateY(10px);
+        transform: translateY(15px);
     }
 }
 
 @keyframes animation-up {
     to {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
     }
 }

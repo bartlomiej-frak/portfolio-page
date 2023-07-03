@@ -1,34 +1,23 @@
 import '../styles/page-styles/takk-page.scss';
 import Button from '../components/Button';
 import Link from '../components/Link';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
+import { useIsScrolled } from '../hooks/useIsScrolled';
 
 function Takk() {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
-    const [scrollTop, setScrollTop] = useState(0);
-
     //Animation on Scroll
-    useEffect(() => {
-        const handleScroll = (event) => {
-            setScrollTop(window.scrollY * 0.05);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [scrollTop]);
+    const scrollTop = useIsScrolled();
 
     return (
         <div className="work takk">
             <div className="work__topbar work__topbar--mobile"></div>
             <div className="work__content">
                 <Link to="/" section="works">
-                    <div className="close">
+                    <div className={`close ${scrollTop && 'close--fixed'}`}>
                         <svg
                             width="30"
                             height="30"
@@ -118,9 +107,9 @@ function Takk() {
                     <div className="slogans">
                         <div className="slogan">
                             <h2 className="slogan__circle">Discover</h2>
-                            <span className="slogan__underline">
+                            {/* <span className="slogan__underline">
                                 <span></span>
-                            </span>
+                            </span> */}
                             <p>
                                 The initial stage involved conducting UX research to gain insights
                                 into user behaviors and pain points. The team analyzed heat maps and
@@ -130,9 +119,9 @@ function Takk() {
                         </div>
                         <div className="slogan">
                             <h2 className="slogan__circle">Define</h2>
-                            <span className="slogan__underline slogan__underline--second">
+                            {/* <span className="slogan__underline slogan__underline--second">
                                 <span></span>
-                            </span>
+                            </span> */}
                             <p>
                                 Based on the research findings, the team collaborated to define the
                                 key areas for improvement. Wireframes were created using Balsamiq
@@ -142,9 +131,9 @@ function Takk() {
                         </div>
                         <div className="slogan">
                             <h2 className="slogan__circle">Develop</h2>
-                            <span className="slogan__underline slogan__underline--third">
+                            {/* <span className="slogan__underline slogan__underline--third">
                                 <span></span>
-                            </span>
+                            </span> */}
                             <p>
                                 Using Figma, proceeded to redesign the website pages, focusing on
                                 simplifying the product purchase process. The design solutions were

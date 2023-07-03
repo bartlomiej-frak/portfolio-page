@@ -1,34 +1,22 @@
 import '../styles/page-styles/commerce-assist-page.scss';
 import Button from '../components/Button';
 import Link from '../components/Link';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
+import { useIsScrolled } from '../hooks/useIsScrolled';
 
 function CommerceAssist() {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
-    const [scrollTop, setScrollTop] = useState(0);
-
-    //Animation on Scroll
-    useEffect(() => {
-        const handleScroll = (event) => {
-            setScrollTop(window.scrollY * 0.05);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [scrollTop]);
+    const scrollTop = useIsScrolled();
 
     return (
         <div className="work commerce">
             <div className="work__topbar work__topbar--mobile"></div>
             <div className="work__content">
                 <Link to="/" section="works">
-                    <div className="close">
+                    <div className={`close ${scrollTop && 'close--fixed'}`}>
                         <svg
                             width="30"
                             height="30"

@@ -1,33 +1,21 @@
 import Button from '../components/Button';
 import Link from '../components/Link';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
+import { useIsScrolled } from '../hooks/useIsScrolled';
 
 function BooLink() {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
-    const [scrollTop, setScrollTop] = useState(0);
-
-    //Animation on Scroll
-    useEffect(() => {
-        const handleScroll = (event) => {
-            setScrollTop(window.scrollY * 0.05);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [scrollTop]);
+    const scrollTop = useIsScrolled();
 
     return (
         <div className="work">
             <div className="work__topbar work__topbar--mobile"></div>
             <div className="work__content">
                 <Link to="/" section="works">
-                    <div className="close">
+                    <div className={`close ${scrollTop && 'close--fixed'}`}>
                         <svg
                             width="30"
                             height="30"
@@ -125,9 +113,9 @@ function BooLink() {
                     <div className="slogans">
                         <div className="slogan">
                             <h2 className="slogan__circle">Discover</h2>
-                            <span className="slogan__underline">
+                            {/* <span className="slogan__underline">
                                 <span></span>
-                            </span>
+                            </span> */}
                             <p>
                                 The initial stage involved gathering information from the internet
                                 and understanding the key ideas behind the boo.link website. The
@@ -138,9 +126,9 @@ function BooLink() {
                         </div>
                         <div className="slogan">
                             <h2 className="slogan__circle">Define</h2>
-                            <span className="slogan__underline slogan__underline--second">
+                            {/* <span className="slogan__underline slogan__underline--second">
                                 <span></span>
-                            </span>
+                            </span> */}
                             <p>
                                 Based on the gathered information, the team collaborated to define
                                 the design direction for the website and the background set. Using
@@ -150,9 +138,9 @@ function BooLink() {
                         </div>
                         <div className="slogan">
                             <h2 className="slogan__circle">Develop</h2>
-                            <span className="slogan__underline slogan__underline--third">
+                            {/* <span className="slogan__underline slogan__underline--third">
                                 <span></span>
-                            </span>
+                            </span> */}
                             <p>
                                 Using Figma for the website redesign and Adobe Illustrator for
                                 creating the background set, the team executed the design vision.

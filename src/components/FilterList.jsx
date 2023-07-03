@@ -12,20 +12,29 @@ function FilterList() {
         <div>
             <ul>
                 <li>
-                    <input type="submit" value="All" onClick={handleFilterTag} />
-                    <img src="assets/logo-small.svg" alt="small-logo" />
+                    <button type="submit" value="All" onClick={handleFilterTag}>
+                        All
+                    </button>
                 </li>
                 <li>
-                    <input type="submit" value="UI/UX" onClick={handleFilterTag} />
+                    <button type="submit" value="UI/UX" onClick={handleFilterTag}>
+                        UI/UX
+                    </button>
                 </li>
                 <li>
-                    <input type="submit" value="Collaborations" onClick={handleFilterTag} />
+                    <button type="submit" value="Collaborations" onClick={handleFilterTag}>
+                        Collaborations
+                    </button>
                 </li>
                 <li>
-                    <input type="submit" value="Case Study" onClick={handleFilterTag} />
+                    <button type="submit" value="Case Study" onClick={handleFilterTag}>
+                        Case Study
+                    </button>
                 </li>
                 <li>
-                    <input type="submit" value="Wireframes" onClick={handleFilterTag} />
+                    <button type="submit" value="Wireframes" onClick={handleFilterTag}>
+                        Wireframes
+                    </button>
                 </li>
             </ul>
         </div>

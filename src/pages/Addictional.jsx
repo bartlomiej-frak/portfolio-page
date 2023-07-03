@@ -1,14 +1,17 @@
 import '../styles/page-styles/addictional-tasks-page.scss';
 import Button from '../components/Button';
 import Link from '../components/Link';
+import { useIsScrolled } from '../hooks/useIsScrolled';
 
 function Addictional() {
+    const scrollTop = useIsScrolled();
+
     return (
         <div className="work addictional">
             <div className="work__topbar work__topbar--mobile"></div>
             <div className="work__content">
                 <Link to="/" section="works">
-                    <div className="close">
+                    <div className={`close ${scrollTop && 'close--fixed'}`}>
                         <svg
                             width="30"
                             height="30"
