@@ -43,15 +43,23 @@ function Navigation() {
             <nav className={navbarClasses.join(' ') + ' mobile'}>
                 {isOpen ? (
                     <>
-                        <img src="assets/logo-mobile.svg" alt="page_logo" />
-                        <FiX onClick={handleClick} className="mobile__menu" />
+                        <img
+                            className="mobile__logo"
+                            src="assets/logo-mobile.svg"
+                            alt="page_logo"
+                        />
+                        <div onClick={handleClick} className="mobile__menu">
+                            <img src="assets/mobile-menu/Close.svg" alt="close" />
+                        </div>
                     </>
                 ) : (
                     <>
                         <Link className="mobile__title" to="/">
                             JUSTYNA ODEJ
                         </Link>
-                        <FiMenu onClick={handleClick} className="mobile__menu" />
+                        <div onClick={handleClick} className="mobile__menu">
+                            <img src="assets/mobile-menu/Menu.svg" alt="menu" />
+                        </div>
                     </>
                 )}
             </nav>

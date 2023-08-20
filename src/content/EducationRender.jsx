@@ -2,7 +2,7 @@ function EducationRender() {
     return (
         <div className="section edu">
             <div>
-                <h2>Vocational Education</h2>
+                <h2>Higher College of Vocational Education in Wrocław</h2>
                 <p>2023 - present</p>
                 <p>Postgraduate studies: Art Therapy (online)</p>
             </div>
@@ -12,7 +12,7 @@ function EducationRender() {
                 <p>Master's degree: Fine Arts (specialization: publishing graphics)</p>
             </div>
             <div>
-                <h2>Fotografika" School of Photography</h2>
+                <h2>„Fotografika” School of Photography</h2>
                 <p>10.2020 - 01.2021</p>
                 <p>Photography</p>
             </div>

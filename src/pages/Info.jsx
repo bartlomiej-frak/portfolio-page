@@ -52,15 +52,15 @@ function Info() {
                         </div>
                     </div>
                     <p className="description">
-                        UI/UX designer, graphic designer and artist. Graduated with a Master's
-                        degree in Fine Arts, specializing in Publication Design from the Faculty of
-                        Arts at Jan Kochanowski University in Kielce. Also holds a Engineer's degree
-                        in Industrial Design, specializing in Industrial Form Design from the
-                        Faculty of Mechatronics and Machine Building at the Kielce University of
-                        Technology. Currently pursuing a postgraduate degree in Art Therapy at the
-                        Higher College of Vocational Education in Wrocław. Actively involved in the
-                        community of the SPPS "Zdrowy Tumlin" Association, where she conducts art
-                        classes for children. Passionate about art, psychology and neuroaesthetics.
+                        Hello! I'm Justyna Odej, a UI/UX designer, graphic designer, and artist.
+                        With a Master's degree in Fine Arts, specializing in Publication Design, and
+                        an Engineer's degree in Industrial Design, I have a strong foundation in
+                        visual communication. Currently pursuing a postgraduate degree in Art
+                        Therapy, I combine my passion for art, psychology, and design. I actively
+                        engage with the SPPS "Zdrowy Tumlin" Association, conducting art classes for
+                        children. Additionally, I work on projects related to visual identification
+                        and UI design. Inspired by the connection between design and human
+                        perception, I strive to create meaningful, user-centered experiences.
                     </p>
                     <div className="contact">
                         <div>

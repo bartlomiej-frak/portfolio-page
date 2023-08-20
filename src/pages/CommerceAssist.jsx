@@ -17,27 +17,21 @@ function CommerceAssist() {
             <div className="work__content">
                 <Link to="/" section="works">
                     <div className={`close ${scrollTop && 'close--fixed'}`}>
-                        <svg
-                            width="30"
-                            height="30"
-                            viewBox="0 0 30 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <g id="Close">
                                 <path
                                     id="Vector"
                                     d="M28 2L2 28"
                                     stroke="white"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="square"
+                                    strokeMiterlimit="10"
+                                    strokeLinecap="square"
                                 />
                                 <path
                                     id="Vector_2"
                                     d="M28 28L2 2"
                                     stroke="white"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="square"
+                                    strokeMiterlimit="10"
+                                    strokeLinecap="square"
                                 />
                             </g>
                         </svg>

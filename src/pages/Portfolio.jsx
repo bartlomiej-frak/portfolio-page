@@ -34,9 +34,8 @@ function Portfolio() {
                         experiences.
                     </p>
                     <p className="description">
-                        With over 4 years of experience in design, I approach my work with love and
-                        enthusiasm, always striving to produce visually stunning designs that make a
-                        meaningful impact.
+                        I approach my work with love and enthusiasm, always striving to produce
+                        visually stunning designs that make a meaningful impact.
                     </p>
                 </div>
                 <div className="portfolio__navigation">

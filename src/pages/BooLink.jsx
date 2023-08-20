@@ -16,27 +16,21 @@ function BooLink() {
             <div className="work__content">
                 <Link to="/" section="works">
                     <div className={`close ${scrollTop && 'close--fixed'}`}>
-                        <svg
-                            width="30"
-                            height="30"
-                            viewBox="0 0 30 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <g id="Close">
                                 <path
                                     id="Vector"
                                     d="M28 2L2 28"
                                     stroke="white"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="square"
+                                    strokeMiterlimit="10"
+                                    strokeLinecap="square"
                                 />
                                 <path
                                     id="Vector_2"
                                     d="M28 28L2 2"
                                     stroke="white"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="square"
+                                    strokeMiterlimit="10"
+                                    strokeLinecap="square"
                                 />
                             </g>
                         </svg>
@@ -113,9 +107,9 @@ function BooLink() {
                     <div className="slogans">
                         <div className="slogan">
                             <h2 className="slogan__circle">Discover</h2>
-                            {/* <span className="slogan__underline">
+                            <span className="slogan__underline">
                                 <span></span>
-                            </span> */}
+                            </span>
                             <p>
                                 The initial stage involved gathering information from the internet
                                 and understanding the key ideas behind the boo.link website. The
@@ -126,9 +120,9 @@ function BooLink() {
                         </div>
                         <div className="slogan">
                             <h2 className="slogan__circle">Define</h2>
-                            {/* <span className="slogan__underline slogan__underline--second">
+                            <span className="slogan__underline slogan__underline--second">
                                 <span></span>
-                            </span> */}
+                            </span>
                             <p>
                                 Based on the gathered information, the team collaborated to define
                                 the design direction for the website and the background set. Using
@@ -138,9 +132,9 @@ function BooLink() {
                         </div>
                         <div className="slogan">
                             <h2 className="slogan__circle">Develop</h2>
-                            {/* <span className="slogan__underline slogan__underline--third">
+                            <span className="slogan__underline slogan__underline--third">
                                 <span></span>
-                            </span> */}
+                            </span>
                             <p>
                                 Using Figma for the website redesign and Adobe Illustrator for
                                 creating the background set, the team executed the design vision.
@@ -152,6 +146,7 @@ function BooLink() {
                         </div>
                     </div>
                 </div>
+
                 <div className="work__result">
                     <div className="work__box work__box--primary">Result</div>
                     <p>
