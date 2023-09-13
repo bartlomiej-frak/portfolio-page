@@ -4,6 +4,8 @@ import Link from '../components/Link';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
+import MobileSwiper from '../components/MobileSwiper';
+import { Slogans } from '../data/slogans';
 
 function Takk() {
     let myRef = useRef();
@@ -99,42 +101,7 @@ function Takk() {
                         </p>
                     </div>
                     <div className="slogans">
-                        <div className="slogan">
-                            <h2 className="slogan__circle">Discover</h2>
-                            {/* <span className="slogan__underline">
-                                <span></span>
-                            </span> */}
-                            <p>
-                                The initial stage involved conducting UX research to gain insights
-                                into user behaviors and pain points. The team analyzed heat maps and
-                                gathered data to understand how users were interacting with the
-                                website.
-                            </p>
-                        </div>
-                        <div className="slogan">
-                            <h2 className="slogan__circle">Define</h2>
-                            {/* <span className="slogan__underline slogan__underline--second">
-                                <span></span>
-                            </span> */}
-                            <p>
-                                Based on the research findings, the team collaborated to define the
-                                key areas for improvement. Wireframes were created using Balsamiq
-                                Mockups 3 to map out the user journey and identify potential design
-                                solutions.
-                            </p>
-                        </div>
-                        <div className="slogan">
-                            <h2 className="slogan__circle">Develop</h2>
-                            {/* <span className="slogan__underline slogan__underline--third">
-                                <span></span>
-                            </span> */}
-                            <p>
-                                Using Figma, proceeded to redesign the website pages, focusing on
-                                simplifying the product purchase process. The design solutions were
-                                developed and refined iteratively, incorporating user feedback and
-                                insights.
-                            </p>
-                        </div>
+                        <MobileSwiper slogans={Slogans.Takk} />
                     </div>
                 </div>
                 <div className="work__result">

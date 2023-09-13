@@ -1,54 +1,35 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
-// import styles from './swiper.scss';
 
-const MobileSwiper = () => {
+const MobileSwiper = ({ slogans }) => {
     return (
-        <Swiper slidesPerView={1}>
+        <Swiper slidesPerView={1} spaceBetween={50}>
             <SwiperSlide>
                 <div className="slogan">
-                    <h2 className="slogan__circle">Discover</h2>
+                    <h2 className="slogan__circle">{slogans.firstSlide.title}</h2>
                     <span className="slogan__underline">
                         <span></span>
                     </span>
-                    <p>
-                        The initial stage involved gathering information from the internet and
-                        understanding the key ideas behind the boo.link website. The team conducted
-                        research to grasp the desired aesthetic and target audience. Insights were
-                        gathered to align the design with the website's purpose.
-                    </p>
+                    <p>{slogans.firstSlide.content}</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="slogan">
-                    <h2 className="slogan__circle">Define</h2>
+                    <h2 className="slogan__circle">{slogans.secondSlide.title}</h2>
                     <span className="slogan__underline slogan__underline--second">
                         <span></span>
                     </span>
-                    <p>
-                        Based on the gathered information, the team collaborated to define the
-                        design direction for the website and the background set. Using Figma,
-                        wireframes and mockups were created to visualize the proposed changes and
-                        ensure a cohesive user experience.
-                    </p>
+                    <p>{slogans.secondSlide.content}</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="slogan">
-                    <h2 className="slogan__circle">Develop</h2>
+                    <h2 className="slogan__circle">{slogans.thirdSlide.title}</h2>
                     <span className="slogan__underline slogan__underline--third">
                         <span></span>
                     </span>
-                    <p>
-                        Using Figma for the website redesign and Adobe Illustrator for creating the
-                        background set, the team executed the design vision. The website was
-                        redesigned to incorporate the new visual elements, such as updated
-                        typography, color schemes, and improved layout. Simultaneously, the
-                        background set was designed to provide a diverse range of appealing options
-                        for the templates.
-                    </p>
+                    <p>{slogans.thirdSlide.content}</p>
                 </div>
             </SwiperSlide>
         </Swiper>
