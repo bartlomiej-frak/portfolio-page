@@ -1,4 +1,4 @@
-$primary-color: #080808;
+$primary-color: #131314;
 $secondary-color: #dbdbdb;
 $tertiary-color: #ffffff;
 
@@ -20,9 +20,12 @@ html {
     font-size: 62.5%;
     font-family: $primary-font, sans-serif;
     font-weight: 400;
-    // letter-spacing: -2px; ???
     color: $secondary-color;
     background-color: $primary-color;
+}
+
+.selectingcolor {
+    color: rgb(206, 197, 255);
 }
 
 //Components

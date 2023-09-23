@@ -14,10 +14,12 @@ import YolUzmani from './pages/YolUzmani';
 import Seaside from './pages/Seaside';
 import CommerceAssist from './pages/CommerceAssist';
 import AddictionalTasks from './pages/Addictional';
+import Cursor from './components/Cursor';
 
 function App() {
     return (
         <>
+            <Cursor />
             <Route path="/">
                 <Portfolio />
             </Route>

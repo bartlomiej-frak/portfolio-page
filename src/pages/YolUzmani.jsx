@@ -8,7 +8,6 @@ function YolUzmani() {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
-    //Animation on Scroll
     const scrollTop = useIsScrolled();
 
     return (

@@ -1,10 +1,18 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-const MobileSwiper = ({ slogans }) => {
+const SlogansSlider = ({ slogans }) => {
     return (
-        <Swiper slidesPerView={1} spaceBetween={50}>
+        <Swiper
+            modules={[Autoplay]}
+            slidesPerView={1}
+            spaceBetween={50}
+            followFinger={false}
+            allowTouchMove={true}
+            autoplay={{ disableOnInteraction: false, delay: 3000 }}
+        >
             <SwiperSlide>
                 <div className="slogan">
                     <h2 className="slogan__circle">{slogans.firstSlide.title}</h2>
@@ -36,4 +44,4 @@ const MobileSwiper = ({ slogans }) => {
     );
 };
 
-export default MobileSwiper;
+export default SlogansSlider;

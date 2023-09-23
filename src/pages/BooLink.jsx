@@ -3,8 +3,9 @@ import Link from '../components/Link';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
-import MobileSwiper from '../components/MobileSwiper';
 import { Slogans } from '../data/slogans';
+import SlogansSlider from '../components/SlogansSlider';
+import SlogansStatic from '../components/SlogansStatic';
 
 function BooLink() {
     let myRef = useRef();
@@ -106,8 +107,11 @@ function BooLink() {
                             design
                         </p>
                     </div>
-                    <div className="slogans">
-                        <MobileSwiper slogans={Slogans.Boolink} />
+                    <div className="slogans slogans--mobile">
+                        <SlogansSlider slogans={Slogans.Boolink} />
+                    </div>
+                    <div className="slogans slogans--desktop">
+                        <SlogansStatic slogans={Slogans.Boolink} />
                     </div>
                 </div>
 

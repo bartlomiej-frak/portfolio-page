@@ -149,6 +149,14 @@
             width: 100%;
             overflow: hidden;
 
+            &--mobile {
+                display: block;
+            }
+
+            &--desktop {
+                display: none;
+            }
+
             .swiper-wrapper {
                 height: 650px;
             }
@@ -226,6 +234,9 @@
     .work {
         &__design {
             .slogans {
+                .swiper-wrapper {
+                    height: 800px;
+                }
                 .slogan {
                     &__circle {
                         width: 500px;
@@ -283,7 +294,6 @@
         }
 
         &__header {
-            display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
@@ -357,6 +367,14 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
+
+                &--mobile {
+                    display: none;
+                }
+
+                &--desktop {
+                    display: flex;
+                }
 
                 p {
                     width: 300px;
