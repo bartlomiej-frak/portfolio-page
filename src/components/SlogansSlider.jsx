@@ -9,9 +9,10 @@ const SlogansSlider = ({ slogans }) => {
             modules={[Autoplay]}
             slidesPerView={1}
             spaceBetween={50}
-            followFinger={false}
+            followFinger={true}
+            speed={100}
             allowTouchMove={true}
-            autoplay={{ disableOnInteraction: false, delay: 3000 }}
+            autoplay={{ disableOnInteraction: false, delay: 10000 }}
         >
             <SwiperSlide>
                 <div className="slogan">

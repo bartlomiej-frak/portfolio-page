@@ -1,11 +1,12 @@
 import Link from './Link';
 import { useEffect, useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
 import MobileMenu from '../components/MobileMenu';
+import { useIsScrolled } from '../hooks/useIsScrolled';
 
 function Navigation() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const scrollY = useIsScrolled();
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -40,7 +41,12 @@ function Navigation() {
 
     return (
         <>
-            <nav className={navbarClasses.join(' ') + ' mobile'}>
+            <nav
+                style={{
+                    background: `rgba(130, 130, 130, ${scrollY < 0.25 ? scrollY * 0.00001 : 0.25})`,
+                }}
+                className={navbarClasses.join(' ') + ' mobile'}
+            >
                 {isOpen ? (
                     <>
                         <img
@@ -65,7 +71,14 @@ function Navigation() {
             </nav>
             {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
 
-            <nav className={navbarClasses.join(' ') + ' desktop'}>
+            <nav
+                style={{
+                    background: `rgba(130, 130, 130, ${
+                        scrollY * 0.025 < 0.25 ? scrollY * 0.025 : 0.25
+                    })`,
+                }}
+                className={navbarClasses.join(' ') + ' desktop'}
+            >
                 <div className="desktop__wrapper">
                     <div className="desktop__title">
                         <Link to="/">JUSTYNA ODEJ</Link>

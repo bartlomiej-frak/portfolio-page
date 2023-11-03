@@ -1,5 +1,5 @@
 .nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -99,10 +99,10 @@
 }
 
 .scrolled {
-    position: fixed;
-    background: rgba(130, 130, 130, 0.23);
+    background: rgba(130, 130, 130, 0.25);
     box-shadow: 0px 15px 58px rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4.5px);
+    transition: 0.2s linear;
 }
 
 .oppened {

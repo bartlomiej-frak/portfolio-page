@@ -8,11 +8,10 @@ const Cursor = () => {
             outerScale={1.5}
             outerAlpha={0}
             hasBlendMode={true}
+            showSystemCursor
             innerStyle={{
-                width: '1px',
-                height: '1px',
-                cursor: 'auto',
-                backgroundColor: 'rgb(206, 197, 255)',
+                backgroundColor: 'transparent',
+                cursor: 'pointer',
             }}
             outerStyle={{
                 background: 'rgb(206, 197, 255)',
