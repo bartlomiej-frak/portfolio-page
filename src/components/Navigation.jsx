@@ -1,36 +1,17 @@
 import Link from './Link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import MobileMenu from '../components/MobileMenu';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 
 function Navigation() {
-    const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const scrollY = useIsScrolled();
-
-    const handleScroll = () => {
-        const offset = window.scrollY;
-
-        if (offset > 79) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    };
 
     const handleClick = () => {
         setIsOpen((currentIsOpen) => !currentIsOpen);
     };
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-    }, []);
-
     let navbarClasses = ['nav'];
-
-    if (scrolled) {
-        navbarClasses.push('scrolled');
-    }
 
     if (isOpen) {
         navbarClasses.push('oppened');
@@ -43,7 +24,9 @@ function Navigation() {
         <>
             <nav
                 style={{
-                    background: `rgba(130, 130, 130, ${scrollY < 0.25 ? scrollY * 0.00001 : 0.25})`,
+                    background: `rgba(130, 130, 130, ${
+                        scrollY * 0.03 < 0.2 ? scrollY * 0.02 : 0.25
+                    })`,
                 }}
                 className={navbarClasses.join(' ') + ' mobile'}
             >
@@ -74,7 +57,7 @@ function Navigation() {
             <nav
                 style={{
                     background: `rgba(130, 130, 130, ${
-                        scrollY * 0.025 < 0.25 ? scrollY * 0.025 : 0.25
+                        scrollY * 0.03 < 0.2 ? scrollY * 0.02 : 0.25
                     })`,
                 }}
                 className={navbarClasses.join(' ') + ' desktop'}
