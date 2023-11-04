@@ -1,10 +1,10 @@
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 
-function Seaside() {
+export const Seaside = () => {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
@@ -119,6 +119,4 @@ function Seaside() {
             </div>
         </div>
     );
-}
-
-export default Seaside;
+};

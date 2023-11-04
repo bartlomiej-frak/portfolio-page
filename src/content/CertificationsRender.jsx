@@ -1,4 +1,4 @@
-function CertificationsRender() {
+export const CertificationsRender = () => {
     return (
         <div className="section certifications">
             <div>
@@ -15,6 +15,4 @@ function CertificationsRender() {
             </div>
         </div>
     );
-}
-
-export default CertificationsRender;
+};

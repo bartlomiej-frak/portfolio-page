@@ -1,13 +1,13 @@
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 import { Slogans } from '../data/slogans';
-import SlogansSlider from '../components/SlogansSlider';
-import SlogansStatic from '../components/SlogansStatic';
+import { SlogansSlider } from '../components/SlogansSlider';
+import { SlogansStatic } from '../components/SlogansStatic';
 
-function BooLink() {
+export const BooLink = () => {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
@@ -140,6 +140,4 @@ function BooLink() {
             </div>
         </div>
     );
-}
-
-export default BooLink;
+};

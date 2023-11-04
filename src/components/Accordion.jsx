@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Accordion({ items }) {
+export const Accordion = ({ items }) => {
     const [expandedIndex, setExpandedIndex] = useState(-1);
 
     const handleClick = (nextIndex) => {
@@ -38,6 +38,4 @@ function Accordion({ items }) {
     });
 
     return <div>{renderedItems}</div>;
-}
-
-export default Accordion;
+};

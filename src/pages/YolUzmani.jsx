@@ -1,10 +1,10 @@
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 
-function YolUzmani() {
+export const YolUzmani = () => {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
@@ -114,6 +114,4 @@ function YolUzmani() {
             </div>
         </div>
     );
-}
-
-export default YolUzmani;
+};

@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimatedCursor from 'react-animated-cursor';
 
-const Cursor = () => {
+export const Cursor = () => {
     return (
         <AnimatedCursor
             outerSize={20}
@@ -33,5 +33,3 @@ const Cursor = () => {
         />
     );
 };
-
-export default Cursor;

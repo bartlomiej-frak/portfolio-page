@@ -1,14 +1,14 @@
 import '../styles/page-styles/takk-page.scss';
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 import { Slogans } from '../data/slogans';
-import SlogansSlider from '../components/SlogansSlider';
-import SlogansStatic from '../components/SlogansStatic';
+import { SlogansSlider } from '../components/SlogansSlider';
+import { SlogansStatic } from '../components/SlogansStatic';
 
-function Takk() {
+export const Takk = () => {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
@@ -132,6 +132,4 @@ function Takk() {
             </div>
         </div>
     );
-}
-
-export default Takk;
+};

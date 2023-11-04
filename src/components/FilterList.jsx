@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { changeSearchTag } from '../store';
 
-function FilterList() {
+export const FilterList = () => {
     const dispatch = useDispatch();
 
     const handleFilterTag = (e) => {
@@ -39,6 +39,4 @@ function FilterList() {
             </ul>
         </div>
     );
-}
-
-export default FilterList;
+};

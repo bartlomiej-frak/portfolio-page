@@ -1,6 +1,6 @@
-import Link from './Link';
+import { Link } from 'react-router-dom';
 
-function MobileMenu({ setIsOpen }) {
+export const MobileMenu = ({ setIsOpen }) => {
     return (
         <div className="menu">
             <ul className="menu__links">
@@ -44,6 +44,4 @@ function MobileMenu({ setIsOpen }) {
             </ul>
         </div>
     );
-}
-
-export default MobileMenu;
+};

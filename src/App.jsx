@@ -2,53 +2,35 @@
 import './components/fonts/neuvegrotesque-regular.ttf';
 
 //Main-pages
-import Route from './components/Route';
-import Portfolio from './pages/Portfolio';
-import Info from './pages/Info';
+import { Portfolio } from './pages/Portfolio';
+import { Info } from './pages/Info';
 
 //Works-pages
-import BooLink from './pages/BooLink';
-import GovernCash from './pages/GovernCash';
-import Takk from './pages/Takk';
-import YolUzmani from './pages/YolUzmani';
-import Seaside from './pages/Seaside';
-import CommerceAssist from './pages/CommerceAssist';
-import AddictionalTasks from './pages/Addictional';
-import Cursor from './components/Cursor';
+import { BooLink } from './pages/BooLink';
+import { GovernCash } from './pages/GovernCash';
+import { Takk } from './pages/Takk';
+import { YolUzmani } from './pages/YolUzmani';
+import { Seaside } from './pages/Seaside';
+import { CommerceAssist } from './pages/CommerceAssist';
+import { Addictional } from './pages/Addictional';
+import { Routes, Route } from 'react-router-dom';
+import { Cursor } from './components/Cursor';
 
-function App() {
+export const App = () => {
     return (
         <>
             <Cursor />
-            <Route path="/">
-                <Portfolio />
-            </Route>
-            <Route path="/Info">
-                <Info />
-            </Route>
-            <Route path="/Boolink">
-                <BooLink />
-            </Route>
-            <Route path="/GovernCash">
-                <GovernCash />
-            </Route>
-            <Route path="/Takk">
-                <Takk />
-            </Route>
-            <Route path="/YolUzmani">
-                <YolUzmani />
-            </Route>
-            <Route path="/Seaside">
-                <Seaside />
-            </Route>
-            <Route path="/CommerceAssist">
-                <CommerceAssist />
-            </Route>
-            <Route path="/AddictionalTasks">
-                <AddictionalTasks />
-            </Route>
+            <Routes>
+                <Route path="/" element={<Portfolio />} />
+                <Route path="/Info" element={<Info />} />
+                <Route path="/Boolink" element={<BooLink />} />
+                <Route path="/GovernCash" element={<GovernCash />} />
+                <Route path="/Takk" element={<Takk />} />
+                <Route path="/YolUzmani" element={<YolUzmani />} />
+                <Route path="/Seaside" element={<Seaside />} />
+                <Route path="/CommerceAssist" element={<CommerceAssist />} />
+                <Route path="/AddictionalTasks" element={<Addictional />} />
+            </Routes>
         </>
     );
-}
-
-export default App;
+};

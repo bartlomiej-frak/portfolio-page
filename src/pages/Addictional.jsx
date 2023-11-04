@@ -1,9 +1,9 @@
 import '../styles/page-styles/addictional-tasks-page.scss';
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 
-function Addictional() {
+export const Addictional = () => {
     const scrollTop = useIsScrolled();
 
     return (
@@ -171,6 +171,4 @@ function Addictional() {
             </div>
         </div>
     );
-}
-
-export default Addictional;
+};

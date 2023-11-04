@@ -1,9 +1,10 @@
-import Link from './Link';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import MobileMenu from '../components/MobileMenu';
+import { MobileMenu } from '../components/MobileMenu';
 import { useIsScrolled } from '../hooks/useIsScrolled';
+import { HashLink } from 'react-router-hash-link';
 
-function Navigation() {
+export const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const scrollY = useIsScrolled();
 
@@ -64,22 +65,28 @@ function Navigation() {
             >
                 <div className="desktop__wrapper">
                     <div className="desktop__title">
-                        <Link to="/">JUSTYNA ODEJ</Link>
+                        <HashLink
+                            to="/#top"
+                            scroll={(el) => window.scrollTo({ top: el.offsetTop - 100 })}
+                        >
+                            JUSTYNA ODEJ
+                        </HashLink>
                     </div>
                     <ul className="desktop__links">
                         <li className="desktop__link">
-                            <Link to="/" section="works">
-                                WORK
-                            </Link>
+                            <HashLink to="/#works">WORK</HashLink>
                         </li>
                         <li className="desktop__link">
-                            <Link to="/Info">INFO</Link>
+                            <HashLink
+                                to="/Info#top"
+                                scroll={(el) => window.scrollTo({ top: el.offsetTop - 100 })}
+                            >
+                                INFO
+                            </HashLink>
                         </li>
                     </ul>
                 </div>
             </nav>
         </>
     );
-}
-
-export default Navigation;
+};

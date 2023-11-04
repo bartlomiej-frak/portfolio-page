@@ -1,8 +1,8 @@
-import Card from './Card';
+import { Card } from './Card';
 import { useSelector } from 'react-redux';
 import { createSelector } from '@reduxjs/toolkit';
 
-function CardList() {
+export const CardList = () => {
     const state = useSelector((state) => state.items);
 
     const filterItems = createSelector(
@@ -20,6 +20,4 @@ function CardList() {
     });
 
     return <div className="worklist">{renderCards}</div>;
-}
-
-export default CardList;
+};

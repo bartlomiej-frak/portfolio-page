@@ -1,4 +1,4 @@
-const SlogansStatic = ({ slogans }) => (
+export const SlogansStatic = ({ slogans }) => (
     <>
         <div className="slogan">
             <h2 className="slogan__circle">{slogans.firstSlide.title}</h2>
@@ -23,5 +23,3 @@ const SlogansStatic = ({ slogans }) => (
         </div>
     </>
 );
-
-export default SlogansStatic;

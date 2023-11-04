@@ -1,9 +1,9 @@
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import CardList from '../components/CardList';
-import FilterList from '../components/FilterList';
+import { Footer } from '../components/Footer';
+import { Navigation } from '../components/Navigation';
+import { CardList } from '../components/CardList';
+import { FilterList } from '../components/FilterList';
 
-function Portfolio() {
+export const Portfolio = () => {
     return (
         <>
             <Navigation />
@@ -38,7 +38,7 @@ function Portfolio() {
                         visually stunning designs that make a meaningful impact.
                     </p>
                 </div>
-                <div className="portfolio__navigation">
+                <div id="works" className="portfolio__navigation">
                     <h1>Works</h1>
                     <div className="filters filters--desktop">
                         <FilterList />
@@ -51,6 +51,4 @@ function Portfolio() {
             <Footer />
         </>
     );
-}
-
-export default Portfolio;
+};

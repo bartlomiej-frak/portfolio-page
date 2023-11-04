@@ -1,6 +1,6 @@
 import className from 'classnames';
 
-function Button({ tag, primary, secondary, ...rest }) {
+export const Button = ({ tag, primary, secondary, ...rest }) => {
     const classes = className(rest.className, {
         primary: primary,
         secondary: secondary,
@@ -11,6 +11,4 @@ function Button({ tag, primary, secondary, ...rest }) {
             {tag}
         </button>
     );
-}
-
-export default Button;
+};

@@ -1,4 +1,4 @@
-function EducationRender() {
+export const EducationRender = () => {
     return (
         <div className="section edu">
             <div>
@@ -23,6 +23,4 @@ function EducationRender() {
             </div>
         </div>
     );
-}
-
-export default EducationRender;
+};

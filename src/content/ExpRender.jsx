@@ -1,4 +1,4 @@
-function ExpRender() {
+export const ExpRender = () => {
     return (
         <div className="section exp">
             <div className="row">
@@ -44,6 +44,4 @@ function ExpRender() {
             </div>
         </div>
     );
-}
-
-export default ExpRender;
+};

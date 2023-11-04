@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-const SlogansSlider = ({ slogans }) => {
+export const SlogansSlider = ({ slogans }) => {
     return (
         <Swiper
             modules={[Autoplay]}
@@ -44,5 +44,3 @@ const SlogansSlider = ({ slogans }) => {
         </Swiper>
     );
 };
-
-export default SlogansSlider;

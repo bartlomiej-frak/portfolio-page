@@ -1,6 +1,6 @@
-import Button from '../components/Button';
+import { Button } from '../components/Button';
 
-function TollsRender() {
+export const TollsRender = () => {
     const tags = [
         'Figma',
         'Adobe XD',
@@ -19,6 +19,4 @@ function TollsRender() {
     });
 
     return <div className="section tolls">{renderTags}</div>;
-}
-
-export default TollsRender;
+};

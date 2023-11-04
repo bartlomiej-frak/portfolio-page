@@ -1,11 +1,11 @@
 import '../styles/page-styles/governcash-page.scss';
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 
-function GovernCash() {
+export const GovernCash = () => {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
@@ -128,6 +128,4 @@ function GovernCash() {
             </div>
         </div>
     );
-}
-
-export default GovernCash;
+};

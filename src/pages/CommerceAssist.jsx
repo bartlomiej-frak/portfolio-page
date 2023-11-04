@@ -1,11 +1,11 @@
 import '../styles/page-styles/commerce-assist-page.scss';
-import Button from '../components/Button';
-import Link from '../components/Link';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useIsVisible } from '../hooks/useIsVisible';
 import { useIsScrolled } from '../hooks/useIsScrolled';
 
-function CommerceAssist() {
+export const CommerceAssist = () => {
     let myRef = useRef();
     let isVisible = useIsVisible(myRef);
 
@@ -147,6 +147,4 @@ function CommerceAssist() {
             </div>
         </div>
     );
-}
-
-export default CommerceAssist;
+};

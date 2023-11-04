@@ -1,16 +1,16 @@
-import Button from '../components/Button';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import Accordion from '../components/Accordion';
+import { Button } from '../components/Button';
+import { Footer } from '../components/Footer';
+import { Navigation } from '../components/Navigation';
+import { Accordion } from '../components/Accordion';
 
 //PAGE CONTENT
-import ExpRender from '../content/ExpRender';
-import EducationRender from '../content/EducationRender';
-import CertificationsRender from '../content/CertificationsRender';
-import SkillsRender from '../content/SkillsRender';
-import TollsRender from '../content/TollsRender';
+import { ExpRender } from '../content/ExpRender';
+import { EducationRender } from '../content/EducationRender';
+import { CertificationsRender } from '../content/CertificationsRender';
+import { SkillsRender } from '../content/SkillsRender';
+import { TollsRender } from '../content/TollsRender';
 
-function Info() {
+export const Info = () => {
     const items = [
         {
             id: 1,
@@ -107,6 +107,4 @@ function Info() {
             <Footer />
         </>
     );
-}
-
-export default Info;
+};

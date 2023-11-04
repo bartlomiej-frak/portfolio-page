@@ -1,7 +1,7 @@
-import Button from './Button';
-import Link from './Link';
+import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
-function Card({ title, tags, link }) {
+export const Card = ({ title, tags, link }) => {
     const renderTags = tags.map((tag) => {
         return <Button key={tag} tag={tag} primary />;
     });
@@ -9,7 +9,7 @@ function Card({ title, tags, link }) {
     const assets = `${link.toLowerCase()}.png`;
 
     return (
-        <Link to={'/' + link}>
+        <Link to={`/${link}`}>
             <div onClick={() => window.scrollTo({ top: 0 })} className="card">
                 {link !== '' ? (
                     <img
@@ -29,6 +29,4 @@ function Card({ title, tags, link }) {
             </div>
         </Link>
     );
-}
-
-export default Card;
+};

@@ -1,4 +1,4 @@
-function SkillsRender() {
+export const SkillsRender = () => {
     return (
         <div className="section skills">
             <div>
@@ -31,6 +31,4 @@ function SkillsRender() {
             </p>
         </div>
     );
-}
-
-export default SkillsRender;
+};

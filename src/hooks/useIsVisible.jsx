@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useIsVisible(ref) {
+export const useIsVisible = (ref) => {
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
@@ -12,4 +12,4 @@ export function useIsVisible(ref) {
     }, [ref]);
 
     return isIntersecting;
-}
+};
